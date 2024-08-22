@@ -1,0 +1,1470 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="WEB_Open" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:p="http://schemas.uipath.com/workflow/activities/cv" xmlns:p1="http://schemas.uipath.com/workflow/activities/ocr" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Drawing;assembly=System.Drawing.Common" xmlns:sd1="clr-namespace:System.Drawing;assembly=System.Drawing.Primitives" xmlns:uc="clr-namespace:UiPath.CV;assembly=UiPath.CV" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property sap2010:Annotation.AnnotationText="Dictionary structure to store configuration data of the process (settings, constants and assets)." Name="in_Config" Type="InArgument(scg:Dictionary(x:String, x:Object))" />
+  </x:Members>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>700,5362</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>WEB_Open_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.CV</x:String>
+      <x:String>UiPath.Shared.ObjectLibrary</x:String>
+      <x:String>UiPath.CV.Activities</x:String>
+      <x:String>UiPath.CV.Activities.Interfaces</x:String>
+      <x:String>UiPath.Vision.OCR</x:String>
+      <x:String>UiPath.OCR.Contracts</x:String>
+      <x:String>UiPath.OCR.Activities</x:String>
+      <x:String>UiPath.OCR.Contracts.Activities</x:String>
+      <x:String>UiPath.Platform.Triggers</x:String>
+      <x:String>UiPath.Platform.Triggers.Scope</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.ViewModels</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.CV</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.CV.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Core</AssemblyReference>
+      <AssemblyReference>UiPath.Vision.Core</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Contracts</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="WEB_Open" sap:VirtualizedContainerService.HintSize="670,5297" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:Boolean" Name="boolExistePantalla" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:OpenBrowser AutomaticallyDownloadWebDriver="{x:Null}" CommunicationMethod="{x:Null}" Hidden="{x:Null}" NewSession="{x:Null}" Private="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Open Browser" sap:VirtualizedContainerService.HintSize="608,5186" sap2010:WorkflowViewState.IdRef="OpenBrowser_1" Url="[in_Config(&quot;UrlWeb&quot;).ToString]">
+      <ui:OpenBrowser.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="574,5061" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <Sequence.Variables>
+              <Variable x:TypeArguments="x:Boolean" Name="boolLoginExitoso" />
+            </Sequence.Variables>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:MaximizeWindow Window="{x:Null}" DisplayName="Maximize Window" sap:VirtualizedContainerService.HintSize="512,25" sap2010:WorkflowViewState.IdRef="MaximizeWindow_1" />
+            <ui:ClickImage SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" ContinueOnError="True" DelayBefore="10000" DelayMS="1000" DisplayName="Click Image 'chrome.exe  AFPnet'" sap:VirtualizedContainerService.HintSize="512,155" sap2010:WorkflowViewState.IdRef="ClickImage_30" KeyModifiers="None" MouseButton="BTN_LEFT">
+              <ui:ClickImage.CursorPosition>
+                <ui:CursorPosition Position="Center">
+                  <ui:CursorPosition.OffsetX>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetX>
+                  <ui:CursorPosition.OffsetY>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetY>
+                </ui:CursorPosition>
+              </ui:ClickImage.CursorPosition>
+              <ui:ClickImage.Image>
+                <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" Profile="Basic" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAPCAYAAADtc08vAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAECSURBVDhPY/j169d/SvAgNeDBi3f/N5+48f/nT1Txr99//F958Mr/dx+/wMUwDPjx4+f/zlVH/1sVzv8/e9tZuCEgzQ2LD4DFl+67BFePYcDv37////z953/j0kNwQ758+w7XPHfn+f9//vzFbQAIoxviXbccrvnv338oanEGIsiQL99//s+YtPW/RcG8/41LDqLYDMM4DUD2s1/Dyv/WRQv+z96OCBMYxmoAsmaQs0HeaVl2GGzIzK1nwAENU4vVgL61x1H8DAsTmCF4YwGEn7/9/H/P+XsoAQYzZM2R6/8/fvkOF8dqwJ8/f4CaMQMMZAhIHETDxHAGIrGYQgN+/QcAjWt+75RhjqUAAAAASUVORK5CYII=" />
+              </ui:ClickImage.Image>
+              <ui:ClickImage.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="6b99ff4f-991b-4280-8ce4-5fd4d71e68dc" TimeoutMS="2000" WaitForReady="INTERACTIVE" />
+              </ui:ClickImage.Target>
+            </ui:ClickImage>
+            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="512,52" sap2010:WorkflowViewState.IdRef="CommentOut_7">
+              <ui:CommentOut.Body>
+                <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="450,266" sap2010:WorkflowViewState.IdRef="Sequence_24">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:ClickImage SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" ContinueOnError="True" DelayBefore="10000" DelayMS="1000" DisplayName="Click Image 'chrome.exe  AFPnet'" sap:VirtualizedContainerService.HintSize="388,155" sap2010:WorkflowViewState.IdRef="ClickImage_31" KeyModifiers="None" MouseButton="BTN_LEFT">
+                    <ui:ClickImage.CursorPosition>
+                      <ui:CursorPosition Position="Center">
+                        <ui:CursorPosition.OffsetX>
+                          <InArgument x:TypeArguments="x:Int32" />
+                        </ui:CursorPosition.OffsetX>
+                        <ui:CursorPosition.OffsetY>
+                          <InArgument x:TypeArguments="x:Int32" />
+                        </ui:CursorPosition.OffsetY>
+                      </ui:CursorPosition>
+                    </ui:ClickImage.CursorPosition>
+                    <ui:ClickImage.Image>
+                      <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" Profile="Basic" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAPCAYAAADtc08vAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAECSURBVDhPY/j169d/SvAgNeDBi3f/N5+48f/nT1Txr99//F958Mr/dx+/wMUwDPjx4+f/zlVH/1sVzv8/e9tZuCEgzQ2LD4DFl+67BFePYcDv37////z953/j0kNwQ758+w7XPHfn+f9//vzFbQAIoxviXbccrvnv338oanEGIsiQL99//s+YtPW/RcG8/41LDqLYDMM4DUD2s1/Dyv/WRQv+z96OCBMYxmoAsmaQs0HeaVl2GGzIzK1nwAENU4vVgL61x1H8DAsTmCF4YwGEn7/9/H/P+XsoAQYzZM2R6/8/fvkOF8dqwJ8/f4CaMQMMZAhIHETDxHAGIrGYQgN+/QcAjWt+75RhjqUAAAAASUVORK5CYII=" />
+                    </ui:ClickImage.Image>
+                    <ui:ClickImage.Target>
+                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="6b99ff4f-991b-4280-8ce4-5fd4d71e68dc" TimeoutMS="2000" WaitForReady="INTERACTIVE" />
+                    </ui:ClickImage.Target>
+                  </ui:ClickImage>
+                </Sequence>
+              </ui:CommentOut.Body>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:CommentOut>
+            <ui:ClickImage SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" ContinueOnError="True" DelayBefore="10000" DelayMS="1000" DisplayName="Click Image 'chrome.exe  AFPnet'" sap:VirtualizedContainerService.HintSize="512,155" sap2010:WorkflowViewState.IdRef="ClickImage_17" KeyModifiers="None" MouseButton="BTN_LEFT">
+              <ui:ClickImage.CursorPosition>
+                <ui:CursorPosition Position="Center">
+                  <ui:CursorPosition.OffsetX>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetX>
+                  <ui:CursorPosition.OffsetY>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetY>
+                </ui:CursorPosition>
+              </ui:ClickImage.CursorPosition>
+              <ui:ClickImage.Image>
+                <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" InitialScalingFactor="1.25" Profile="Basic" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAABUAAAAWCAYAAAAvg9c4AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAE1SURBVEhL7dLNSwJBGAbw/qyw7p079l+UHevUqXuniNIOQhQIHULyoCB4iLWkNSzRviwEKwgP4n7M9LTvhjGz+84K1tHDc9mH98fOvDPneR7+OzOUL/4SI1rv9JAr2XAcl+2t1iuOyg24brxj0W7/E8tbx0itZbB7VovB1t0LljZySKUzKFhtraOwqBAC9kP/ZzAC/4LB973CFXxfxOaNx5dSavDO6QWqN88aKIQMUD82m7goFZ5fPQgzCaQkohSCi5f3WEhnQ3TzsAw3OLIJpExEx3eo/im3PDWJqLqU/fM6riN3PBw57JwRrdiPGijlF7s8DmbR3scAK9t5DRx3Kry4nkWx1tFmKSxK77TZfUe+ehtuOdoT3Hh6w0mlyfbG4xNMw6YtU0fhusRFTZsZyhfTx8M3E1nK6M8odVIAAAAASUVORK5CYII=" />
+              </ui:ClickImage.Image>
+              <ui:ClickImage.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="1dac7df2-b236-48e4-91bb-609f2402746d" Selector="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='AFPnet - Google Chrome' /&gt;" TimeoutMS="2000" WaitForReady="COMPLETE" />
+              </ui:ClickImage.Target>
+            </ui:ClickImage>
+            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="512,52" sap2010:WorkflowViewState.IdRef="CommentOut_5">
+              <ui:CommentOut.Body>
+                <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="450,461" sap2010:WorkflowViewState.IdRef="Sequence_22">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:ClickImage DelayBefore="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" ContinueOnError="True" DelayMS="1000" DisplayName="Click VentaEmergente  AFPnet'" sap:VirtualizedContainerService.HintSize="388,155" sap2010:WorkflowViewState.IdRef="ClickImage_18" KeyModifiers="None" MouseButton="BTN_LEFT">
+                    <ui:ClickImage.CursorPosition>
+                      <ui:CursorPosition Position="Center">
+                        <ui:CursorPosition.OffsetX>
+                          <InArgument x:TypeArguments="x:Int32" />
+                        </ui:CursorPosition.OffsetX>
+                        <ui:CursorPosition.OffsetY>
+                          <InArgument x:TypeArguments="x:Int32" />
+                        </ui:CursorPosition.OffsetY>
+                      </ui:CursorPosition>
+                    </ui:ClickImage.CursorPosition>
+                    <ui:ClickImage.Image>
+                      <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" InitialScalingFactor="1.25" Profile="Basic" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAABUAAAAWCAYAAAAvg9c4AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAE1SURBVEhL7dLNSwJBGAbw/qyw7p079l+UHevUqXuniNIOQhQIHULyoCB4iLWkNSzRviwEKwgP4n7M9LTvhjGz+84K1tHDc9mH98fOvDPneR7+OzOUL/4SI1rv9JAr2XAcl+2t1iuOyg24brxj0W7/E8tbx0itZbB7VovB1t0LljZySKUzKFhtraOwqBAC9kP/ZzAC/4LB973CFXxfxOaNx5dSavDO6QWqN88aKIQMUD82m7goFZ5fPQgzCaQkohSCi5f3WEhnQ3TzsAw3OLIJpExEx3eo/im3PDWJqLqU/fM6riN3PBw57JwRrdiPGijlF7s8DmbR3scAK9t5DRx3Kry4nkWx1tFmKSxK77TZfUe+ehtuOdoT3Hh6w0mlyfbG4xNMw6YtU0fhusRFTZsZyhfTx8M3E1nK6M8odVIAAAAASUVORK5CYII=" />
+                    </ui:ClickImage.Image>
+                    <ui:ClickImage.Target>
+                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="1dac7df2-b236-48e4-91bb-609f2402746d" Selector="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='AFPnet - Google Chrome' /&gt;" TimeoutMS="2000">
+                        <ui:Target.WaitForReady>
+                          <InArgument x:TypeArguments="ui:WaitForReady" />
+                        </ui:Target.WaitForReady>
+                      </ui:Target>
+                    </ui:ClickImage.Target>
+                  </ui:ClickImage>
+                  <ui:ClickImage DelayBefore="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" ContinueOnError="True" DelayMS="1000" DisplayName="Click Ventana Emergente" sap:VirtualizedContainerService.HintSize="388,155" sap2010:WorkflowViewState.IdRef="ClickImage_20" KeyModifiers="None" MouseButton="BTN_LEFT">
+                    <ui:ClickImage.CursorPosition>
+                      <ui:CursorPosition Position="Center">
+                        <ui:CursorPosition.OffsetX>
+                          <InArgument x:TypeArguments="x:Int32" />
+                        </ui:CursorPosition.OffsetX>
+                        <ui:CursorPosition.OffsetY>
+                          <InArgument x:TypeArguments="x:Int32" />
+                        </ui:CursorPosition.OffsetY>
+                      </ui:CursorPosition>
+                    </ui:ClickImage.CursorPosition>
+                    <ui:ClickImage.Image>
+                      <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" InitialScalingFactor="1.25" Profile="Basic" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAABUAAAAWCAYAAAAvg9c4AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAE1SURBVEhL7dLNSwJBGAbw/qyw7p079l+UHevUqXuniNIOQhQIHULyoCB4iLWkNSzRviwEKwgP4n7M9LTvhjGz+84K1tHDc9mH98fOvDPneR7+OzOUL/4SI1rv9JAr2XAcl+2t1iuOyg24brxj0W7/E8tbx0itZbB7VovB1t0LljZySKUzKFhtraOwqBAC9kP/ZzAC/4LB973CFXxfxOaNx5dSavDO6QWqN88aKIQMUD82m7goFZ5fPQgzCaQkohSCi5f3WEhnQ3TzsAw3OLIJpExEx3eo/im3PDWJqLqU/fM6riN3PBw57JwRrdiPGijlF7s8DmbR3scAK9t5DRx3Kry4nkWx1tFmKSxK77TZfUe+ehtuOdoT3Hh6w0mlyfbG4xNMw6YtU0fhusRFTZsZyhfTx8M3E1nK6M8odVIAAAAASUVORK5CYII=" />
+                    </ui:ClickImage.Image>
+                    <ui:ClickImage.Target>
+                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="1dac7df2-b236-48e4-91bb-609f2402746d" Selector="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='AFPnet - Google Chrome' /&gt;" TimeoutMS="2000">
+                        <ui:Target.WaitForReady>
+                          <InArgument x:TypeArguments="ui:WaitForReady" />
+                        </ui:Target.WaitForReady>
+                      </ui:Target>
+                    </ui:ClickImage.Target>
+                  </ui:ClickImage>
+                </Sequence>
+              </ui:CommentOut.Body>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:CommentOut>
+            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="512,52" sap2010:WorkflowViewState.IdRef="CommentOut_4">
+              <ui:CommentOut.Body>
+                <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="512,458" sap2010:WorkflowViewState.IdRef="Sequence_14">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <Sequence sap:VirtualizedContainerService.HintSize="450,347" sap2010:WorkflowViewState.IdRef="Sequence_13">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <ui:ClickImage ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click Image 'chrome.exe  AFPnet'" sap:VirtualizedContainerService.HintSize="388,52" sap2010:WorkflowViewState.IdRef="ClickImage_14" KeyModifiers="None" MouseButton="BTN_LEFT">
+                      <ui:ClickImage.CursorPosition>
+                        <ui:CursorPosition Position="Center">
+                          <ui:CursorPosition.OffsetX>
+                            <InArgument x:TypeArguments="x:Int32" />
+                          </ui:CursorPosition.OffsetX>
+                          <ui:CursorPosition.OffsetY>
+                            <InArgument x:TypeArguments="x:Int32" />
+                          </ui:CursorPosition.OffsetY>
+                        </ui:CursorPosition>
+                      </ui:ClickImage.CursorPosition>
+                      <ui:ClickImage.Image>
+                        <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" Profile="Basic" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAABUAAAAUCAYAAABiS3YzAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAEUSURBVDhPY/j169d/auNRQ7FLUIKHiaEPXrz7v/nEjf8/f6KKf/3+4//Kg1f+v/v4BUUchnEa+uPHz/+dq47+tyqc/3/2trNwg0EGNiw+ABZfuu8Shj4Qxmno79+////8/ed/49JDcIO/fPsON3DuzvP///z5i1UvXu+jG+xdtxxu4N+//7DqAWGCEQUy+Mv3n/8zJm39b1Ew73/jkoM4XQjDBA1FDkO/hpX/rYsW/J+9HRHG2DBeQ5ENBHkZFBQtyw6DDZ659Qw4MrHpw2to39rjKGEIC2OYwSTHPgg/f/v5/57z91AiBWbwmiPX/3/88h1FPQzjNfTPnz9AAzEjBWQwSBxEo8uBMMGIIgcPFUN//QcAsMJBwF5Oyj0AAAAASUVORK5CYII=" />
+                      </ui:ClickImage.Image>
+                      <ui:ClickImage.Target>
+                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="1dac7df2-b236-48e4-91bb-609f2402746d" WaitForReady="COMPLETE">
+                          <ui:Target.TimeoutMS>
+                            <InArgument x:TypeArguments="x:Int32" />
+                          </ui:Target.TimeoutMS>
+                        </ui:Target>
+                      </ui:ClickImage.Target>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </ui:ClickImage>
+                    <ui:UiElementExists DisplayName="Existe Pantalla Web" Exists="[boolExistePantalla]" sap:VirtualizedContainerService.HintSize="388,52" sap2010:WorkflowViewState.IdRef="UiElementExists_1">
+                      <ui:UiElementExists.Target>
+                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="12653598-23d0-4226-afdd-6e071df62d5c" InformativeScreenshot="8bc35c91fa5443da6254c05aa15b1a47" Selector="&lt;html app='chrome.exe' title='AFPnet' /&gt;&lt;webctrl id='winComunicado_299' tag='DIV' /&gt;" TimeoutMS="5000">
+                          <ui:Target.WaitForReady>
+                            <InArgument x:TypeArguments="ui:WaitForReady" />
+                          </ui:Target.WaitForReady>
+                        </ui:Target>
+                      </ui:UiElementExists.Target>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </ui:UiElementExists>
+                    <If Condition="[boolExistePantalla]" sap:VirtualizedContainerService.HintSize="388,52" sap2010:WorkflowViewState.IdRef="If_1">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <If.Then>
+                        <Sequence sap:VirtualizedContainerService.HintSize="377.6,379.2" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334.4,142.4" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Se abrio correctamente la WEB&quot;]" />
+                          <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Cerrar Pestaña por Defecto" sap:VirtualizedContainerService.HintSize="334.4,107.2" sap2010:WorkflowViewState.IdRef="Click_1" KeyModifiers="None" MouseButton="BTN_LEFT">
+                            <ui:Click.CursorPosition>
+                              <ui:CursorPosition Position="Center">
+                                <ui:CursorPosition.OffsetX>
+                                  <InArgument x:TypeArguments="x:Int32" />
+                                </ui:CursorPosition.OffsetX>
+                                <ui:CursorPosition.OffsetY>
+                                  <InArgument x:TypeArguments="x:Int32" />
+                                </ui:CursorPosition.OffsetY>
+                              </ui:CursorPosition>
+                            </ui:Click.CursorPosition>
+                            <ui:Click.Target>
+                              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="5e60f736-870d-4c7b-8401-52583e7c7c0c" InformativeScreenshot="bcee74dc776ac534832e3a96b02bd47b" Selector="&lt;webctrl parentid='winComunicado_299' tag='SPAN' /&gt;">
+                                <ui:Target.TimeoutMS>
+                                  <InArgument x:TypeArguments="x:Int32" />
+                                </ui:Target.TimeoutMS>
+                                <ui:Target.WaitForReady>
+                                  <InArgument x:TypeArguments="ui:WaitForReady" />
+                                </ui:Target.WaitForReady>
+                              </ui:Target>
+                            </ui:Click.Target>
+                          </ui:Click>
+                        </Sequence>
+                      </If.Then>
+                      <If.Else>
+                        <Sequence sap:VirtualizedContainerService.HintSize="377.6,180" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <Throw Exception="[New Exception(&quot;No se logro ingresar a la WEB&quot;)]" sap:VirtualizedContainerService.HintSize="334.4,90.4" sap2010:WorkflowViewState.IdRef="Throw_1" />
+                        </Sequence>
+                      </If.Else>
+                    </If>
+                  </Sequence>
+                </Sequence>
+              </ui:CommentOut.Body>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:CommentOut>
+            <ui:TypeInto AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SimulateType="{x:Null}" Activate="True" ClickBeforeTyping="True" DisplayName="Ingrese RUC" EmptyField="True" sap:VirtualizedContainerService.HintSize="512,135" sap2010:WorkflowViewState.IdRef="TypeInto_1" SendWindowMessages="False" Text="[in_Config(&quot;RUC_Overall&quot;).ToString]">
+              <ui:TypeInto.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="67a86ed0-339a-4f44-9e07-ad4df00c4bd3" Selector="&lt;webctrl tag='LABEL' /&gt;&lt;nav up='1' /&gt;&lt;webctrl id='NumeroDocumento' tag='INPUT' /&gt;" WaitForReady="COMPLETE">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                </ui:Target>
+              </ui:TypeInto.Target>
+            </ui:TypeInto>
+            <ui:TypeInto AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" ClickBeforeTyping="True" DisplayName="Ingrese USUARIO" EmptyField="True" sap:VirtualizedContainerService.HintSize="512,155" sap2010:WorkflowViewState.IdRef="TypeInto_2" Text="[in_Config(&quot;Usuario_Overall&quot;).ToString]">
+              <ui:TypeInto.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="fa1bf928-a5ab-4ba3-b4e2-08269332d843" InformativeScreenshot="aa62cf7796886c4597bd46bc298342c0" Selector="&lt;webctrl aaname='Usuario:' tag='LABEL' /&gt;&lt;nav up='1' /&gt;&lt;webctrl id='NombreUsuario' tag='INPUT' /&gt;" WaitForReady="COMPLETE">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                </ui:Target>
+              </ui:TypeInto.Target>
+            </ui:TypeInto>
+            <Sequence DisplayName="PASSWORD" sap:VirtualizedContainerService.HintSize="512,81" sap2010:WorkflowViewState.IdRef="Sequence_5">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="388,52" sap2010:WorkflowViewState.IdRef="CommentOut_2">
+                <ui:CommentOut.Body>
+                  <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="450,246" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <ui:InjectJsScript InputParameter="{x:Null}" ScriptOutput="{x:Null}" DisplayName="Inject Js Script" sap:VirtualizedContainerService.HintSize="388,135" sap2010:WorkflowViewState.IdRef="InjectJsScript_2" ScriptCode="function ingresar(){document.querySelector('#btn-ingresar').click()}">
+                      <ui:InjectJsScript.Target>
+                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="ec7c703d-ae20-4069-9964-81c8066de4c1">
+                          <ui:Target.TimeoutMS>
+                            <InArgument x:TypeArguments="x:Int32" />
+                          </ui:Target.TimeoutMS>
+                          <ui:Target.WaitForReady>
+                            <InArgument x:TypeArguments="ui:WaitForReady" />
+                          </ui:Target.WaitForReady>
+                        </ui:Target>
+                      </ui:InjectJsScript.Target>
+                    </ui:InjectJsScript>
+                  </Sequence>
+                </ui:CommentOut.Body>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </ui:CommentOut>
+              <ui:InjectJsScript ScriptOutput="{x:Null}" DisplayName="Inject Js Script &quot;1erDigito&quot;" sap:VirtualizedContainerService.HintSize="388,135" sap2010:WorkflowViewState.IdRef="InjectJsScript_4" InputParameter="1" ScriptCode="function(e) { var elements = document.querySelectorAll('.px-3.mb-1.btn.btn-sm.btn-outline-primary.btn-keypad.btn-number.btn-login'); var found = false; for (var i = 0; i &lt; elements.length; i++) { if (elements[i].innerText.trim() === '1') { elements[i].click(); found = true; break; } } return found.toString(); }">
+                <ui:InjectJsScript.Target>
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="006fd18e-c870-4e47-af4b-8babeb3344ff">
+                    <ui:Target.TimeoutMS>
+                      <InArgument x:TypeArguments="x:Int32" />
+                    </ui:Target.TimeoutMS>
+                    <ui:Target.WaitForReady>
+                      <InArgument x:TypeArguments="ui:WaitForReady" />
+                    </ui:Target.WaitForReady>
+                  </ui:Target>
+                </ui:InjectJsScript.Target>
+              </ui:InjectJsScript>
+              <ui:InjectJsScript InputParameter="{x:Null}" ScriptOutput="{x:Null}" DisplayName="Inject Js Script &quot;2doDigito&quot;" sap:VirtualizedContainerService.HintSize="388,135" sap2010:WorkflowViewState.IdRef="InjectJsScript_5" ScriptCode="function(e) { var elements = document.querySelectorAll('.px-3.mb-1.btn.btn-sm.btn-outline-primary.btn-keypad.btn-number.btn-login'); var found = false; for (var i = 0; i &lt; elements.length; i++) { if (elements[i].innerText.trim() === '5') { elements[i].click(); found = true; break; } } return found.toString(); }">
+                <ui:InjectJsScript.Target>
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="006fd18e-c870-4e47-af4b-8babeb3344ff">
+                    <ui:Target.TimeoutMS>
+                      <InArgument x:TypeArguments="x:Int32" />
+                    </ui:Target.TimeoutMS>
+                    <ui:Target.WaitForReady>
+                      <InArgument x:TypeArguments="ui:WaitForReady" />
+                    </ui:Target.WaitForReady>
+                  </ui:Target>
+                </ui:InjectJsScript.Target>
+              </ui:InjectJsScript>
+              <ui:InjectJsScript InputParameter="{x:Null}" ScriptOutput="{x:Null}" DisplayName="Inject Js Script &quot;3erDigito&quot;" sap:VirtualizedContainerService.HintSize="388,135" sap2010:WorkflowViewState.IdRef="InjectJsScript_6" ScriptCode="function(e) { var elements = document.querySelectorAll('.px-3.mb-1.btn.btn-sm.btn-outline-primary.btn-keypad.btn-number.btn-login'); var found = false; for (var i = 0; i &lt; elements.length; i++) { if (elements[i].innerText.trim() === '1') { elements[i].click(); found = true; break; } } return found.toString(); }">
+                <ui:InjectJsScript.Target>
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="006fd18e-c870-4e47-af4b-8babeb3344ff">
+                    <ui:Target.TimeoutMS>
+                      <InArgument x:TypeArguments="x:Int32" />
+                    </ui:Target.TimeoutMS>
+                    <ui:Target.WaitForReady>
+                      <InArgument x:TypeArguments="ui:WaitForReady" />
+                    </ui:Target.WaitForReady>
+                  </ui:Target>
+                </ui:InjectJsScript.Target>
+              </ui:InjectJsScript>
+              <ui:InjectJsScript InputParameter="{x:Null}" ScriptOutput="{x:Null}" DisplayName="Inject Js Script &quot;4toDigito&quot;" sap:VirtualizedContainerService.HintSize="388,135" sap2010:WorkflowViewState.IdRef="InjectJsScript_10" ScriptCode="function(e) { var elements = document.querySelectorAll('.px-3.mb-1.btn.btn-sm.btn-outline-primary.btn-keypad.btn-number.btn-login'); var found = false; for (var i = 0; i &lt; elements.length; i++) { if (elements[i].innerText.trim() === '0') { elements[i].click(); found = true; break; } } return found.toString(); }">
+                <ui:InjectJsScript.Target>
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="006fd18e-c870-4e47-af4b-8babeb3344ff">
+                    <ui:Target.TimeoutMS>
+                      <InArgument x:TypeArguments="x:Int32" />
+                    </ui:Target.TimeoutMS>
+                    <ui:Target.WaitForReady>
+                      <InArgument x:TypeArguments="ui:WaitForReady" />
+                    </ui:Target.WaitForReady>
+                  </ui:Target>
+                </ui:InjectJsScript.Target>
+              </ui:InjectJsScript>
+              <ui:InjectJsScript InputParameter="{x:Null}" ScriptOutput="{x:Null}" DisplayName="Inject Js Script &quot;5toDigito&quot;" sap:VirtualizedContainerService.HintSize="388,135" sap2010:WorkflowViewState.IdRef="InjectJsScript_11" ScriptCode="function(e) { var elements = document.querySelectorAll('.px-3.mb-1.btn.btn-sm.btn-outline-primary.btn-keypad.btn-number.btn-login'); var found = false; for (var i = 0; i &lt; elements.length; i++) { if (elements[i].innerText.trim() === '2') { elements[i].click(); found = true; break; } } return found.toString(); }">
+                <ui:InjectJsScript.Target>
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="006fd18e-c870-4e47-af4b-8babeb3344ff">
+                    <ui:Target.TimeoutMS>
+                      <InArgument x:TypeArguments="x:Int32" />
+                    </ui:Target.TimeoutMS>
+                    <ui:Target.WaitForReady>
+                      <InArgument x:TypeArguments="ui:WaitForReady" />
+                    </ui:Target.WaitForReady>
+                  </ui:Target>
+                </ui:InjectJsScript.Target>
+              </ui:InjectJsScript>
+              <ui:InjectJsScript InputParameter="{x:Null}" ScriptOutput="{x:Null}" DisplayName="Inject Js Script &quot;6toDigito&quot;" sap:VirtualizedContainerService.HintSize="388,135" sap2010:WorkflowViewState.IdRef="InjectJsScript_8" ScriptCode="function(e) { var elements = document.querySelectorAll('.px-3.mb-1.btn.btn-sm.btn-outline-primary.btn-keypad.btn-number.btn-login'); var found = false; for (var i = 0; i &lt; elements.length; i++) { if (elements[i].innerText.trim() === '2') { elements[i].click(); found = true; break; } } return found.toString(); }">
+                <ui:InjectJsScript.Target>
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="006fd18e-c870-4e47-af4b-8babeb3344ff">
+                    <ui:Target.TimeoutMS>
+                      <InArgument x:TypeArguments="x:Int32" />
+                    </ui:Target.TimeoutMS>
+                    <ui:Target.WaitForReady>
+                      <InArgument x:TypeArguments="ui:WaitForReady" />
+                    </ui:Target.WaitForReady>
+                  </ui:Target>
+                </ui:InjectJsScript.Target>
+              </ui:InjectJsScript>
+            </Sequence>
+            <Sequence DisplayName="CAPCHA" sap:VirtualizedContainerService.HintSize="512,2446" sap2010:WorkflowViewState.IdRef="Sequence_8">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <Sequence DisplayName="Action" sap:VirtualizedContainerService.HintSize="450,2335" sap2010:WorkflowViewState.IdRef="Sequence_9">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" ContinueOnError="True" DisplayName="Click CAPTCHA" sap:VirtualizedContainerService.HintSize="388,107" sap2010:WorkflowViewState.IdRef="Click_2" KeyModifiers="None" MouseButton="BTN_RIGHT">
+                  <ui:Click.CursorPosition>
+                    <ui:CursorPosition Position="Center">
+                      <ui:CursorPosition.OffsetX>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:CursorPosition.OffsetX>
+                      <ui:CursorPosition.OffsetY>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:CursorPosition.OffsetY>
+                    </ui:CursorPosition>
+                  </ui:Click.CursorPosition>
+                  <ui:Click.Target>
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="d16bfa7c-ab61-4097-a05b-aba70bda68da" InformativeScreenshot="19c653cea624ea1a52cb2e759efdf813" Selector="&lt;webctrl id='CaptchaImg' tag='IMG' /&gt;">
+                      <ui:Target.TimeoutMS>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:Target.TimeoutMS>
+                      <ui:Target.WaitForReady>
+                        <InArgument x:TypeArguments="ui:WaitForReady" />
+                      </ui:Target.WaitForReady>
+                    </ui:Target>
+                  </ui:Click.Target>
+                </ui:Click>
+                <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Abrir GoogleLEGN" sap:VirtualizedContainerService.HintSize="388,133" sap2010:WorkflowViewState.IdRef="SendHotkey_1" Key="b" KeyModifiers="None" SpecialKey="False">
+                  <ui:SendHotkey.Target>
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="96171121-0671-43b5-9a77-b019d7112d27">
+                      <ui:Target.TimeoutMS>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:Target.TimeoutMS>
+                      <ui:Target.WaitForReady>
+                        <InArgument x:TypeArguments="ui:WaitForReady" />
+                      </ui:Target.WaitForReady>
+                    </ui:Target>
+                  </ui:SendHotkey.Target>
+                </ui:SendHotkey>
+                <ui:ClickImage DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" ContinueOnError="True" DisplayName="Click Image 'chrome.exe  AFPnet'" sap:VirtualizedContainerService.HintSize="388,155" sap2010:WorkflowViewState.IdRef="ClickImage_13" KeyModifiers="None" MouseButton="BTN_LEFT">
+                  <ui:ClickImage.CursorPosition>
+                    <ui:CursorPosition Position="Center">
+                      <ui:CursorPosition.OffsetX>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:CursorPosition.OffsetX>
+                      <ui:CursorPosition.OffsetY>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:CursorPosition.OffsetY>
+                    </ui:CursorPosition>
+                  </ui:ClickImage.CursorPosition>
+                  <ui:ClickImage.Image>
+                    <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" Profile="Basic" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEEAAAAeCAYAAABzL3NnAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGFSURBVFhH7ZXBSgMxEIb7KBb6EoIHn0c8+AKC4FEQPIkHD4IgCIIIgoiH0oMiKB6KoAhFKEIRfIY4X+BfYtkcdrsFt53DR5pJMiRfJtvO6tp6WHZcguESDJdguATDJRiVJBweHYfJ90+WsjVtoJKE7Z3dcHvXjzw8PsWD0ypWtqYKkkxbNj4vaj+HeWx4YSScnJ6F0ec4jtGqQjY2t2L//WNUzH1+GYbx16SoMNakpDlZR4z5VB/5ND4rjUpgs8T6g/sY18EkYm//oOhr7vnFZRxDxNX1TYzRKq/mSaieYSpzVhqVwEaBmNBta47E6EYVh1zO4evbn3kSQ5vG69KoBPo50rUIIMbtp/FcTlVSSi5eh8YrYfp2eQLpYXkqSACqJJ2by9mqSuB964aI00/LXmt48zoIv6dzIgdZxDQPGa34JgCbZsOMIUAlq3+H9Fb1vaBaFOPwWqsYOf/lv8Mi4RIMl2C4BMMlGC7BcAmGSzBcguESDJdguASjs9LthWXHJXR74Re2wv+aSH0mXAAAAABJRU5ErkJggg==" />
+                  </ui:ClickImage.Image>
+                  <ui:ClickImage.Target>
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="61d9e19e-2680-4552-b25a-b5d078d7ec11" WaitForReady="INTERACTIVE">
+                      <ui:Target.TimeoutMS>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:Target.TimeoutMS>
+                    </ui:Target>
+                  </ui:ClickImage.Target>
+                </ui:ClickImage>
+                <ui:ClickImage DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" ContinueOnError="True" DisplayName="Click Image 'chrome.exe AFPnet'" sap:VirtualizedContainerService.HintSize="388,155" sap2010:WorkflowViewState.IdRef="ClickImage_23" KeyModifiers="None" MouseButton="BTN_LEFT">
+                  <ui:ClickImage.CursorPosition>
+                    <ui:CursorPosition Position="Center">
+                      <ui:CursorPosition.OffsetX>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:CursorPosition.OffsetX>
+                      <ui:CursorPosition.OffsetY>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:CursorPosition.OffsetY>
+                    </ui:CursorPosition>
+                  </ui:ClickImage.CursorPosition>
+                  <ui:ClickImage.Image>
+                    <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" Profile="Basic" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAADAAAAASCAYAAAAdZl26AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFUSURBVEhL7ZSxagJBEIbzWkIKnyekyAsIgmXAIk1ASCEWgliIpIkQEAIRIWhxCAkiCoqIkGfY8C38x0R2CR4mZ+CKn739d2Z2/pnZuyhdlt1/RiEgbwQF3Dce3G7/GUXIJy8EBVSqNTd4HnqMxm8+aVZxIZ9joAKxhs6PwY8jdMrLhLMQ0Gy13WK19mes6szV9Y3ff8yXqe1kmrjNdpd2Fh8LGxM/OOzpOvF0HkImAVwEN3x59bySkojb+l26l22n2/NniOg/PnmOVXFlp2JodG0hQsgkgEsAnKAqy0aiVEnxIBYzmb1/s5MoVstbZBLAPgbrS/JwVN3ysZjqoEWMFzJ34LCqjI1NlPFCAKA71jYW8886wDyrMvDs7ajIhxlXEnwfxkQYQuFkh5BffwOAC7mMM5JXm/UXstXU+6BL4khcvuKIefK/0LmjEJA3CgH5ouy+AMhd7nnZcu1mAAAAAElFTkSuQmCC" />
+                  </ui:ClickImage.Image>
+                  <ui:ClickImage.Target>
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="60708a5b-0aae-435a-b357-581bdc85242d" TimeoutMS="2000">
+                      <ui:Target.WaitForReady>
+                        <InArgument x:TypeArguments="ui:WaitForReady" />
+                      </ui:Target.WaitForReady>
+                    </ui:Target>
+                  </ui:ClickImage.Target>
+                </ui:ClickImage>
+                <ui:ClickImage DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" ContinueOnError="True" DisplayName="Click Image 'chrome.exe AFPnet'" sap:VirtualizedContainerService.HintSize="388,155" sap2010:WorkflowViewState.IdRef="ClickImage_21" KeyModifiers="None" MouseButton="BTN_LEFT">
+                  <ui:ClickImage.CursorPosition>
+                    <ui:CursorPosition Position="Center">
+                      <ui:CursorPosition.OffsetX>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:CursorPosition.OffsetX>
+                      <ui:CursorPosition.OffsetY>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:CursorPosition.OffsetY>
+                    </ui:CursorPosition>
+                  </ui:ClickImage.CursorPosition>
+                  <ui:ClickImage.Image>
+                    <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" Profile="Basic" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABfSURBVDhP7ZBBDoAgDAR9Yv//CewCUS+ulIuJSUXhZmyzN2ZKO6kqR/ILvisQETfXt+4PnsCW2xVasKbQvoEHA2BaMHDEMt2qSzAjcC/dJUBU5jVW2OqVwPbO2wmT5AHQrLV6Wq5jpQAAAABJRU5ErkJggg==" />
+                  </ui:ClickImage.Image>
+                  <ui:ClickImage.Target>
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="5f572166-6a6c-4ec1-9332-e10a16016d86" TimeoutMS="2000">
+                      <ui:Target.WaitForReady>
+                        <InArgument x:TypeArguments="ui:WaitForReady" />
+                      </ui:Target.WaitForReady>
+                    </ui:Target>
+                  </ui:ClickImage.Target>
+                </ui:ClickImage>
+                <ui:ClickImage DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" ContinueOnError="True" DisplayName="Click Seleccionar Texto" sap:VirtualizedContainerService.HintSize="388,155" sap2010:WorkflowViewState.IdRef="ClickImage_24" KeyModifiers="None" MouseButton="BTN_LEFT">
+                  <ui:ClickImage.CursorPosition>
+                    <ui:CursorPosition Position="Center">
+                      <ui:CursorPosition.OffsetX>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:CursorPosition.OffsetX>
+                      <ui:CursorPosition.OffsetY>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:CursorPosition.OffsetY>
+                    </ui:CursorPosition>
+                  </ui:ClickImage.CursorPosition>
+                  <ui:ClickImage.Image>
+                    <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" Profile="Basic" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAAMsAAAAXCAYAAAClB7tnAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAQkSURBVHhe7dfNqlVHEAVgnyOP5mv4DnkDJxk6c5JZBk4yETIRMnIkgQwkIAYEf9DoVU/4rqxLpdP79PbnHr1SCxanu6q6q7qqa+99rv1w49Gh2Wyu2c3SbO5kN0uzuZPdLM3mTnazNJs72c3SbO5kN0uzuZPdLM3mTnazNJs7eZJm+fGX54c/Hp8dgvt/nR2u//Rkajvjwydvz9fNdF+aN24/Pbw+e3+49+ebqf574N0Hry8tnzd/fXG+Nx8z/VXmSZrl2av3FxcQjTXAzHbGbpYPhC9xCb9ms0Tvd6b/FF7meSovvVmSnJ9/f3Uhu/Xby//MVzxls3zLhG6W//O7aRafW3mTeGrPbNCB2cHfz9+dN1R0Y7P4rIvMmvGzzpgs+7G1Zq8earHFIiYY/aX4d+7/c2HjTVofBjVe8Ekaf3W9dTBepNhUxOZYbGictznQm0NsxFI/k2t8M9bzbOVj1iy51BVVlxhr/fmCvOn5kSc25jWvYB67WuO656fyZP9ZchEUYnyrpJgujGSncLkQSYhxPpPI6O2VOb0kSQyZfRUhn4HWrvT2gBRbgoENmQJAipXLAeKuRc9+5Fjjtd/W+vGiijl2/BuTrWLD5FJ+2CSXQJ98Jh+pBSb+ythv5T9x8jVbq8aQWpOv6p815rFNjvzm3PSRywHQiUWO4HMa5iTNEgo0B0tyJRBymUKHI2OTAhtnvb1iKxkgUYoH5PGbIrlgK705pNjiSKxhLmliAHGN+tGHeY2RfLZ+i1Av4Sq25Ha8uGM+Xb6cHa0jczEjC1f5z3lGn2H0fs0T47H6o5jFBPIXOcZ/5rMaowaqD5KP5UmaZQy6FpRuC7kItbgZz2CvMXEjV3qEFLuOZzaJv9pElnO7dBUperWd+Rg52o3zUT7GEdKBsXwmz5XH5FvgZ3WeMabMZ6j+NSJoosjCep7ZfCXfy0tvlvoKjSzNQpcny/i0YJ+nXQpk7Mk2Jsweef3Onir2kaitN0vVm4O58d43S+wxMr8zfZqn2lb9Fke7r/VmOZb/1Xlqbsz31B+9EfgF96ba8gWZX9k3iwMLMMlHY5QoNimYQzpgDp8E1uIqCtu8tl2KJIGv0Z+9JDn+Vno+IMXO5WNDls8Qe9CLAWJfZX7zRLTO3Jn4gq31WwR+2dp3FRvKE8ghm+QS6J1ZPMnHrD6Vq/yvzhO99XyRreqfOd/WZJw9o6dLI4kH7E2fRhNv1n0sT/IZJokpJEhUPSw6kISBg9VD1WZBa2vR7c1H9PGX/dhWfys9iCfzXAiwpvqbXY7I/JoreoqViw1b67dYGy3xHosNjdMA4KxpoNjYKzKY1aeSbiv/e86TCy+myNgnxlp/viD78UOf5ows8Yg9slpj9p/TKHjSP/jN5lVmN0uzuZPdLM3mTnazNJu7+OjwL1eDrk9yt+59AAAAAElFTkSuQmCC" />
+                  </ui:ClickImage.Image>
+                  <ui:ClickImage.Target>
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="7408a8c8-b256-46d9-92ad-c6252c06f6d2" TimeoutMS="2000">
+                      <ui:Target.WaitForReady>
+                        <InArgument x:TypeArguments="ui:WaitForReady" />
+                      </ui:Target.WaitForReady>
+                    </ui:Target>
+                  </ui:ClickImage.Target>
+                </ui:ClickImage>
+                <ui:ClickImage DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" ContinueOnError="True" DisplayName="Click Copiar Texto" sap:VirtualizedContainerService.HintSize="388,155" sap2010:WorkflowViewState.IdRef="ClickImage_25" KeyModifiers="None" MouseButton="BTN_LEFT">
+                  <ui:ClickImage.CursorPosition>
+                    <ui:CursorPosition Position="Center">
+                      <ui:CursorPosition.OffsetX>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:CursorPosition.OffsetX>
+                      <ui:CursorPosition.OffsetY>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:CursorPosition.OffsetY>
+                    </ui:CursorPosition>
+                  </ui:ClickImage.CursorPosition>
+                  <ui:ClickImage.Image>
+                    <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" Profile="Basic" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAAHoAAAAZCAYAAAD+OToQAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAANySURBVGhD7ZrLa1NBFMbzh7kQXYkgCAU3IvjaCeJaxJXgayFFiuKmVHeiuBLdtnGnXfpCLYlYlMQ01CQ1IenIb7hfGKf31ZJw85gPhtx77plvzpzvzNybm5SMh1q9Yb58q5rfjabp9weRNWBagYZoORS62+2ZyvdN8/NXPQg8g7BCd3b+mq8bVdNsbltjwOyhxEpG5O0/rcgUMIsosV2HlTz7KHFPzkKvb8zm1q7ZqA1SW7U+MDu9qFPARKGU58Hrzee+ObXYNkdutFLb8Ttt87gclJ5E7Pl6FYeVtZ4VMm4Vu+30UsdcfNSJegVMEnIJvbzatUJn4dzDjm37RbvdNk+fPTeXLl8xhw4fte3m7bvm/YePkcdo8G593XLzOW8oXGhElsBXr123gi+vPDFnzp63tlGKPS6hiRneUWLUnIlCv3jbG4o2TqER98TJhT2CUgCra+XobLIx1UK74o5L6Fq9bifDpPKAlajVT3HcX3pgCwJQKOLSbsCnyy0fFRV94cBGg9td7djYXShGjuPi1DU1zgX8iRO7y12pVq0NbkAcxIoPyOJMml8aChXaT3watO1qchJIyREXjcTgo4QpGf54L1+9HgrgFhEFCMSHHQ63CAREUyzwcg4QEZEZAzvPHP7YOpev+qZxYvPnp4JJw9QIjcBuZQOJz6e4JKpAH5II4sZjNXFO0w6j6xwzbhYYE19BPHqgVIMLm6DY8PVvU0mc/vwkvna2JEzN1p3kJzuJ5FgiCW7CfB+Sq0TTdKzrHPvFFQd3DKBx4prLx0rFFldMSZyKTUiy+yhUaKCqjguUatW2NY4VzTErTKtBfO71gwitAvZXKbzuyuOWwLzwZSt3kcTpz28qVjQgQN0bSSoTIXglQBOTCNixjeIeTQHQn3P4FYeuiysL8ONL3BKM+OBHbPjkI/F1TiFLLBU1iOOUnz8/7FnIJfR+3oxdOMCbMcQmcCWaFvfCxBWDJJJMVTK+2EmKEqCiEOQjXhLr8rkPSIDjPEITg8Z078GMDS92YiF+oC1bsdGf68Si+aRxahH480tDLqHLn/pm4V72u+5jt1q2XxHwRQz4H7mE5terH43sX68qBf56FYROR6LQebdrta32btSzGASh05H4M2Xe7VqtqC07IB8S/3iQd7tWK3pFB6Qj/JVoThD+HDgXMOYfyMjJLIjqu7EAAAAASUVORK5CYII=" />
+                  </ui:ClickImage.Image>
+                  <ui:ClickImage.Target>
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="9e49973b-5d56-4cf3-a7c5-7c7de4205007" TimeoutMS="2000">
+                      <ui:Target.WaitForReady>
+                        <InArgument x:TypeArguments="ui:WaitForReady" />
+                      </ui:Target.WaitForReady>
+                    </ui:Target>
+                  </ui:ClickImage.Target>
+                </ui:ClickImage>
+                <ui:ClickImage DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" ContinueOnError="True" DisplayName="Click cerrra Lengs" sap:VirtualizedContainerService.HintSize="388,155" sap2010:WorkflowViewState.IdRef="ClickImage_28" KeyModifiers="None" MouseButton="BTN_LEFT">
+                  <ui:ClickImage.CursorPosition>
+                    <ui:CursorPosition Position="Center">
+                      <ui:CursorPosition.OffsetX>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:CursorPosition.OffsetX>
+                      <ui:CursorPosition.OffsetY>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:CursorPosition.OffsetY>
+                    </ui:CursorPosition>
+                  </ui:ClickImage.CursorPosition>
+                  <ui:ClickImage.Image>
+                    <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" Profile="Basic" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAABgAAAASCAYAAABB7B6eAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADESURBVDhP7ZJhCsIwDIU9ioIHU+f0pzK6Oax6hq3VI647xNgiLxT84WomIkPwg0B5Ce9B0gl9mX+AyHgBztVUlIa6rvPKA2joYUYiGGDslaazOSWJorZtvUr8hoYeZiRerkifLmwUx1tqmoYLb2joDUG8gdZnNozWG1oso7fMgRiAfe/2CRuj0izvvUuI8QPy/MjGqyjmwhtrG8p4Ry6NZSOVHp6+qVIZ96y9eTVMMKCqHIf07RtaURiekRBv8Cm/HkB0BwZtXHafW/7GAAAAAElFTkSuQmCC" />
+                  </ui:ClickImage.Image>
+                  <ui:ClickImage.Target>
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="1cca12bc-fbfb-4428-a76b-202171ac8090" TimeoutMS="2000">
+                      <ui:Target.WaitForReady>
+                        <InArgument x:TypeArguments="ui:WaitForReady" />
+                      </ui:Target.WaitForReady>
+                    </ui:Target>
+                  </ui:ClickImage.Target>
+                </ui:ClickImage>
+                <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click &quot;PEGAR TEXTO&quot;" sap:VirtualizedContainerService.HintSize="388,107" sap2010:WorkflowViewState.IdRef="Click_7" KeyModifiers="None" MouseButton="BTN_LEFT">
+                  <ui:Click.CursorPosition>
+                    <ui:CursorPosition Position="Center">
+                      <ui:CursorPosition.OffsetX>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:CursorPosition.OffsetX>
+                      <ui:CursorPosition.OffsetY>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:CursorPosition.OffsetY>
+                    </ui:CursorPosition>
+                  </ui:Click.CursorPosition>
+                  <ui:Click.Target>
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="a6b81511-7703-40a2-ba38-1bca8d29ae71" InformativeScreenshot="c814e4372311a7305a03be0036d042c5" Selector="&lt;webctrl aaname='Texto de la imagen:' tag='LABEL' /&gt;&lt;nav up='1' /&gt;&lt;webctrl id='Captcha' tag='INPUT' /&gt;">
+                      <ui:Target.TimeoutMS>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:Target.TimeoutMS>
+                      <ui:Target.WaitForReady>
+                        <InArgument x:TypeArguments="ui:WaitForReady" />
+                      </ui:Target.WaitForReady>
+                    </ui:Target>
+                  </ui:Click.Target>
+                </ui:Click>
+                <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SpecialKey="{x:Null}" Activate="True" DisplayName="Send Hotkey 'INPUT  Captcha'" sap:VirtualizedContainerService.HintSize="388,153" sap2010:WorkflowViewState.IdRef="SendHotkey_3" Key="v" KeyModifiers="Ctrl">
+                  <ui:SendHotkey.Target>
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="85f30f50-892c-4fea-b61f-9fc31315e51c" InformativeScreenshot="757ebd557aea51c5a2a612036a0180dc" Selector="&lt;html app='chrome.exe' title='AFPnet' /&gt;&lt;webctrl aaname='Texto de la imagen:' tag='LABEL' /&gt;&lt;nav up='1' /&gt;&lt;webctrl id='Captcha' tag='INPUT' /&gt;">
+                      <ui:Target.TimeoutMS>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:Target.TimeoutMS>
+                      <ui:Target.WaitForReady>
+                        <InArgument x:TypeArguments="ui:WaitForReady" />
+                      </ui:Target.WaitForReady>
+                    </ui:Target>
+                  </ui:SendHotkey.Target>
+                </ui:SendHotkey>
+                <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'BUTTON  btn-ingresar'" sap:VirtualizedContainerService.HintSize="388,107" sap2010:WorkflowViewState.IdRef="Click_10" KeyModifiers="None" MouseButton="BTN_LEFT">
+                  <ui:Click.CursorPosition>
+                    <ui:CursorPosition Position="Center">
+                      <ui:CursorPosition.OffsetX>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:CursorPosition.OffsetX>
+                      <ui:CursorPosition.OffsetY>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:CursorPosition.OffsetY>
+                    </ui:CursorPosition>
+                  </ui:Click.CursorPosition>
+                  <ui:Click.Target>
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="c430f2f2-8b8d-4ef4-a4e9-eed345416351" InformativeScreenshot="2efaa5c5b20fbbb5c5759817c6814ed4" Selector="&lt;webctrl tag='U' /&gt;&lt;nav up='5' /&gt;&lt;webctrl id='btn-ingresar' tag='BUTTON' idx='1' /&gt;">
+                      <ui:Target.TimeoutMS>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:Target.TimeoutMS>
+                      <ui:Target.WaitForReady>
+                        <InArgument x:TypeArguments="ui:WaitForReady" />
+                      </ui:Target.WaitForReady>
+                    </ui:Target>
+                  </ui:Click.Target>
+                </ui:Click>
+                <ui:ClickImage DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" ContinueOnError="True" DisplayName="Click Image 'chrome.exe  AFPnet'" sap:VirtualizedContainerService.HintSize="388,155" sap2010:WorkflowViewState.IdRef="ClickImage_29" KeyModifiers="None" MouseButton="BTN_LEFT">
+                  <ui:ClickImage.CursorPosition>
+                    <ui:CursorPosition Position="Center">
+                      <ui:CursorPosition.OffsetX>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:CursorPosition.OffsetX>
+                      <ui:CursorPosition.OffsetY>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:CursorPosition.OffsetY>
+                    </ui:CursorPosition>
+                  </ui:ClickImage.CursorPosition>
+                  <ui:ClickImage.Image>
+                    <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" Profile="Basic" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAABEAAAARCAYAAAA7bUf6AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAEjSURBVDhP7dG7SsRAFAZgXyVFUuRF1CbvkndwLYQEBxFEXCxk8RJY3a2CL5Dewk7wtmY3MUvcmEyyCr+ZkSwZZlKIlhanmMM5HzP/rL1EOX5b/4hcSuTm9h6X42tMZu9C/ylc4PRihLuHWOhLyPM0wy7Zh2EYODoerCAGbPV2eP/cuxJ2JGT2WqCgFVzXha7rHHqcpBxgZ8/zUJQfwo7yOVFCQVvQ+sbmCqA1EMaFMN8ZLIOyLIdt29A0DY7j1DdcSgCrToRl0Nv+zsCyLJimiX4ro3YpkSbE5glVtQQhhEOH/RMefnteiZC9AyGDeE552A00OBsK80oknEYIgkAIkWXEIN/3kczfhHklki6qekH+Bf5r5SeStBT6ncH+pP4AyfEFDQEHka2FyecAAAAASUVORK5CYII=" />
+                  </ui:ClickImage.Image>
+                  <ui:ClickImage.Target>
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="b7d0e850-860d-4e91-9399-a142e0435672">
+                      <ui:Target.TimeoutMS>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:Target.TimeoutMS>
+                      <ui:Target.WaitForReady>
+                        <InArgument x:TypeArguments="ui:WaitForReady" />
+                      </ui:Target.WaitForReady>
+                    </ui:Target>
+                  </ui:ClickImage.Target>
+                </ui:ClickImage>
+                <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="388,52" sap2010:WorkflowViewState.IdRef="CommentOut_6">
+                  <ui:CommentOut.Body>
+                    <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="450,347" sap2010:WorkflowViewState.IdRef="Sequence_23">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <p:CVScope ContinueOnError="{x:Null}" DelayBefore="{x:Null}" ScopeId="{x:Null}" Server="{x:Null}" CvMethod="ElementDetection, OCR" DesignTimeCacheId="b142900b-4eca-4f21-b6c7-cb3b8061f015" DisplayName="CV Screen Scope 'HEADER'" sap:VirtualizedContainerService.HintSize="388,52" sap2010:WorkflowViewState.IdRef="CVScope_5" SendOnPremData="False" Version="V6">
+                        <p:CVScope.Body>
+                          <ActivityAction x:TypeArguments="x:Object">
+                            <ActivityAction.Argument>
+                              <DelegateInArgument x:TypeArguments="x:Object" Name="CVSessionData" />
+                            </ActivityAction.Argument>
+                            <Sequence DisplayName="Do" sap2010:WorkflowViewState.IdRef="Sequence_19">
+                              <p:CvClickWithDescriptor DelayBefore="{x:Null}" DelayMS="{x:Null}" DelayScreenshotAfterScroll="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" Descriptor="[&quot;Target: Text 'Seleccionar todo el texto' (86,540,168,14)&quot;]" DesignTimeCacheId="b142900b-4eca-4f21-b6c7-cb3b8061f015" DesignTimeScaleFactor="1.25" DisplayName="CV Click - Text" sap:VirtualizedContainerService.HintSize="400,185" sap2010:WorkflowViewState.IdRef="CvClickWithDescriptor_6" InformativeScreenshot="f138294dea33c9c056c788dd56019adb" KeyModifiers="None" MouseButton="BTN_LEFT" NumberOfScrolls="2" ScrollDirection="None" Version="V6">
+                                <p:CvClickWithDescriptor.CursorPosition>
+                                  <ui:CursorPosition Position="Center">
+                                    <ui:CursorPosition.OffsetX>
+                                      <InArgument x:TypeArguments="x:Int32" />
+                                    </ui:CursorPosition.OffsetX>
+                                    <ui:CursorPosition.OffsetY>
+                                      <InArgument x:TypeArguments="x:Int32" />
+                                    </ui:CursorPosition.OffsetY>
+                                  </ui:CursorPosition>
+                                </p:CvClickWithDescriptor.CursorPosition>
+                                <p:CvClickWithDescriptor.DesignTimeDescriptor>
+                                  <uc:CvDescriptor Id="203a669d-271c-4eaa-be6e-4f04a90ad311">
+                                    <uc:CvDescriptor.Target>
+                                      <uc:CvElementDescriptor CellExtraInfo="{x:Null}" DesignTimeArea="86, 540, 168, 14" ElementType="Text" Text="Seleccionar todo el texto" />
+                                    </uc:CvDescriptor.Target>
+                                  </uc:CvDescriptor>
+                                </p:CvClickWithDescriptor.DesignTimeDescriptor>
+                                <p:CvClickWithDescriptor.Target>
+                                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="bee29bad-32a8-405a-96c2-ae681325518a">
+                                    <ui:Target.TimeoutMS>
+                                      <InArgument x:TypeArguments="x:Int32" />
+                                    </ui:Target.TimeoutMS>
+                                    <ui:Target.WaitForReady>
+                                      <InArgument x:TypeArguments="ui:WaitForReady" />
+                                    </ui:Target.WaitForReady>
+                                  </ui:Target>
+                                </p:CvClickWithDescriptor.Target>
+                              </p:CvClickWithDescriptor>
+                            </Sequence>
+                          </ActivityAction>
+                        </p:CVScope.Body>
+                        <p:CVScope.DesignTimeCache>
+                          <uc:CVCache CvUiElements="{x:Null}" OcrTexts="{x:Null}" DataSent="False" />
+                        </p:CVScope.DesignTimeCache>
+                        <p:CVScope.DesignTimeCacheContainer>
+                          <uc:CvCacheContainer>
+                            <uc:CvCacheContainer.Caches>
+                              <scg:List x:TypeArguments="uc:CVCache" Capacity="1">
+                                <uc:CVCache DataSent="False" DisplayName="Screen CV Click - 'No' (Main)" Id="b142900b-4eca-4f21-b6c7-cb3b8061f015" InformativeScreenshot="7328e36bd6fbfb85b3caa55aa4071a90" LogicalPosition="1448, 238" OcrText="CO9R Buscar Texto Traducir Haz clic y arrastra el cursor para seleccionar texto No se han encontrado resultados para el area seleccionada Seleccionar todo el texto ¿Te han sido utiles estos resultados? Si No" Position="1448, 238" ScaleFactor="1.25" ScreenshotGuid="911b8c57-9d8c-4cfc-ba87-dc3b303c58d4" ServerVersion="1">
+                                  <uc:CVCache.CvAnchorRelations>
+                                    <scg:List x:TypeArguments="uc:AnchorRelationInfo" Capacity="0" />
+                                  </uc:CVCache.CvAnchorRelations>
+                                  <uc:CVCache.CvUiElements>
+                                    <scg:List x:TypeArguments="uc:CvElementInfo" Capacity="32">
+                                      <uc:CvElementInfo Category="Icon" Region="18, 573, 19, 17" />
+                                      <uc:CvElementInfo Category="Button" Region="58, 191, 82, 36" />
+                                      <uc:CvElementInfo Category="Button" Region="134, 191, 65, 36" />
+                                      <uc:CvElementInfo Category="Icon" Confidence="Runtime" Region="116, 269, 111, 100" />
+                                      <uc:CvElementInfo Category="ArrowButton" Confidence="Runtime" Region="343, 589, 18, 18" />
+                                      <uc:CvElementInfo Category="Button" Confidence="Runtime" Region="199, 192, 86, 33" />
+                                      <uc:CvElementInfo Category="Button" Confidence="Runtime" Region="64, 530, 215, 30" />
+                                      <uc:CvElementInfo Category="ArrowButton" Confidence="Runtime" Region="340, 0, 21, 18" />
+                                      <uc:CvElementInfo Category="Icon" Confidence="Runtime" Region="133, 190, 67, 36" />
+                                      <uc:CvElementInfo Category="Icon" Confidence="Runtime" Region="230, 575, 16, 16" />
+                                      <uc:CvElementInfo Category="Icon" Confidence="Runtime" Region="291, 573, 23, 19" />
+                                      <uc:CvElementInfo Category="Icon" Confidence="Runtime" Region="22, 62, 20, 20" />
+                                      <uc:CvElementInfo Category="Icon" Confidence="Runtime" Region="299, 57, 23, 24" />
+                                      <uc:CvElementInfo Category="Button" Confidence="Runtime" Region="12, 54, 321, 100" />
+                                      <uc:CvElementInfo Category="Button" Confidence="Runtime" Region="19, 574, 16, 15" />
+                                      <uc:CvElementInfo Category="ArrowButton" Confidence="Runtime" Region="300, 63, 20, 20" />
+                                      <uc:CvElementInfo Category="ArrowButton" Confidence="Runtime" Region="22, 64, 20, 21" />
+                                      <uc:CvElementInfo Category="Button" Confidence="Runtime" Region="94, 73, 175, 60" />
+                                      <uc:CvElementInfo Category="CloseButton" Confidence="Runtime" Region="296, 65, 23, 18" />
+                                    </scg:List>
+                                  </uc:CVCache.CvUiElements>
+                                  <uc:CVCache.OcrTexts>
+                                    <scg:List x:TypeArguments="uc:OcrTextInfo" Capacity="34">
+                                      <uc:OcrTextInfo Region="105, 80, 150, 50" Text="CO9R" />
+                                      <uc:OcrTextInfo Region="69, 201, 48, 12" Text="Buscar" />
+                                      <uc:OcrTextInfo Region="146, 201, 38, 12" Text="Texto" />
+                                      <uc:OcrTextInfo Region="216, 200, 57, 14" Text="Traducir" />
+                                      <uc:OcrTextInfo Region="52, 408, 29, 14" Text="Haz" />
+                                      <uc:OcrTextInfo Region="82, 408, 28, 14" Text="clic" />
+                                      <uc:OcrTextInfo Region="112, 410, 10, 14" Text="y" />
+                                      <uc:OcrTextInfo Region="124, 408, 60, 13" Text="arrastra" />
+                                      <uc:OcrTextInfo Region="188, 408, 13, 14" Text="el" />
+                                      <uc:OcrTextInfo Region="204, 410, 50, 12" Text="cursor" />
+                                      <uc:OcrTextInfo Region="256, 410, 34, 14" Text="para" />
+                                      <uc:OcrTextInfo Region="106, 432, 88, 14" Text="seleccionar" />
+                                      <uc:OcrTextInfo Region="194, 432, 41, 13" Text="texto" />
+                                      <uc:OcrTextInfo Region="33, 456, 21, 14" Text="No" />
+                                      <uc:OcrTextInfo Region="58, 458, 17, 12" Text="se" />
+                                      <uc:OcrTextInfo Region="78, 456, 28, 14" Text="han" />
+                                      <uc:OcrTextInfo Region="109, 456, 82, 14" Text="encontrado" />
+                                      <uc:OcrTextInfo Region="196, 456, 76, 16" Text="resultados" />
+                                      <uc:OcrTextInfo Region="276, 458, 32, 16" Text="para" />
+                                      <uc:OcrTextInfo Region="96, 480, 13, 14" Text="el" />
+                                      <uc:OcrTextInfo Region="112, 480, 33, 16" Text="area" />
+                                      <uc:OcrTextInfo Region="148, 480, 96, 14" Text="seleccionada" />
+                                      <uc:OcrTextInfo Region="86, 540, 80, 14" Text="Seleccionar" />
+                                      <uc:OcrTextInfo Region="168, 541, 33, 13" Text="todo" />
+                                      <uc:OcrTextInfo Region="202, 541, 14, 13" Text="el" />
+                                      <uc:OcrTextInfo Region="217, 541, 37, 13" Text="texto" />
+                                      <uc:OcrTextInfo Region="44, 566, 22, 16" Text="¿Te" />
+                                      <uc:OcrTextInfo Region="68, 568, 21, 10" Text="han" />
+                                      <uc:OcrTextInfo Region="92, 568, 24, 12" Text="sido" />
+                                      <uc:OcrTextInfo Region="118, 568, 32, 12" Text="utiles" />
+                                      <uc:OcrTextInfo Region="152, 568, 32, 10" Text="estos" />
+                                      <uc:OcrTextInfo Region="44, 584, 66, 12" Text="resultados?" />
+                                      <uc:OcrTextInfo Region="232, 576, 13, 12" Text="Si" />
+                                      <uc:OcrTextInfo Region="292, 576, 20, 13" Text="No" />
+                                    </scg:List>
+                                  </uc:CVCache.OcrTexts>
+                                </uc:CVCache>
+                              </scg:List>
+                            </uc:CvCacheContainer.Caches>
+                          </uc:CvCacheContainer>
+                        </p:CVScope.DesignTimeCacheContainer>
+                        <p:CVScope.OCREngine>
+                          <ActivityFunc x:TypeArguments="sd:Image, scg:IEnumerable(scg:KeyValuePair(sd1:Rectangle, x:String))">
+                            <ActivityFunc.Argument>
+                              <DelegateInArgument x:TypeArguments="sd:Image" Name="Image" />
+                            </ActivityFunc.Argument>
+                            <p1:UiPathScreenOCR ApiKey="{x:Null}" Endpoint="{x:Null}" Output="{x:Null}" PredictionId="{x:Null}" Text="{x:Null}" UseLocalServer="{x:Null}" ComputeSkewAngle="False" ExtractWords="True" sap:VirtualizedContainerService.HintSize="200,25" sap2010:WorkflowViewState.IdRef="UiPathScreenOCR_5" Image="[Image]" Language="en" NoopExecution="False" Profile="Screen" Scale="1" Timeout="100000" />
+                          </ActivityFunc>
+                        </p:CVScope.OCREngine>
+                        <p:CVScope.Target>
+                          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="eb7528b1-7e20-4441-aab8-670cada38cb0" InformativeScreenshot="14c9bfd35366651d57a5bff9265cd593" Selector="&lt;html app='chrome.exe' title='AFPnet' /&gt;&lt;webctrl tag='HEADER' /&gt;" WaitForReady="INTERACTIVE">
+                            <ui:Target.TimeoutMS>
+                              <InArgument x:TypeArguments="x:Int32" />
+                            </ui:Target.TimeoutMS>
+                          </ui:Target>
+                        </p:CVScope.Target>
+                        <p:CVScope.UseLocalServer>
+                          <InArgument x:TypeArguments="x:Boolean" />
+                        </p:CVScope.UseLocalServer>
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </p:CVScope>
+                      <p:CVScope ContinueOnError="{x:Null}" DelayBefore="{x:Null}" ScopeId="{x:Null}" Server="{x:Null}" CvMethod="ElementDetection, OCR" DesignTimeCacheId="e1c4e34b-3ce4-4a35-b297-fff6d978f9ce" DisplayName="CV Screen Scope 'HEADER'" sap:VirtualizedContainerService.HintSize="388,52" sap2010:WorkflowViewState.IdRef="CVScope_6" SendOnPremData="False" Version="V6">
+                        <p:CVScope.Body>
+                          <ActivityAction x:TypeArguments="x:Object">
+                            <ActivityAction.Argument>
+                              <DelegateInArgument x:TypeArguments="x:Object" Name="CVSessionData" />
+                            </ActivityAction.Argument>
+                            <Sequence DisplayName="Do" sap2010:WorkflowViewState.IdRef="Sequence_20">
+                              <p:CvClickWithDescriptor DelayBefore="{x:Null}" DelayMS="{x:Null}" DelayScreenshotAfterScroll="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" Descriptor="[&quot;Target: Text 'Copiar texto' (48,316,85,16)&quot;]" DesignTimeCacheId="e1c4e34b-3ce4-4a35-b297-fff6d978f9ce" DesignTimeScaleFactor="1.25" DisplayName="CV Click - Text" sap:VirtualizedContainerService.HintSize="400,185" sap2010:WorkflowViewState.IdRef="CvClickWithDescriptor_7" InformativeScreenshot="7f44f135946ccea988863c7dee6cd21b" KeyModifiers="None" MouseButton="BTN_LEFT" NumberOfScrolls="2" ScrollDirection="None" Version="V6">
+                                <p:CvClickWithDescriptor.CursorPosition>
+                                  <ui:CursorPosition Position="Center">
+                                    <ui:CursorPosition.OffsetX>
+                                      <InArgument x:TypeArguments="x:Int32" />
+                                    </ui:CursorPosition.OffsetX>
+                                    <ui:CursorPosition.OffsetY>
+                                      <InArgument x:TypeArguments="x:Int32" />
+                                    </ui:CursorPosition.OffsetY>
+                                  </ui:CursorPosition>
+                                </p:CvClickWithDescriptor.CursorPosition>
+                                <p:CvClickWithDescriptor.DesignTimeDescriptor>
+                                  <uc:CvDescriptor Id="eb9c2219-0517-40e3-973b-bd7ed940e5b0">
+                                    <uc:CvDescriptor.Target>
+                                      <uc:CvElementDescriptor CellExtraInfo="{x:Null}" DesignTimeArea="48, 316, 85, 16" ElementType="Text" Text="Copiar texto" />
+                                    </uc:CvDescriptor.Target>
+                                  </uc:CvDescriptor>
+                                </p:CvClickWithDescriptor.DesignTimeDescriptor>
+                                <p:CvClickWithDescriptor.Target>
+                                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="1c81b9fa-c5b7-4814-babb-8baa8d39b041">
+                                    <ui:Target.TimeoutMS>
+                                      <InArgument x:TypeArguments="x:Int32" />
+                                    </ui:Target.TimeoutMS>
+                                    <ui:Target.WaitForReady>
+                                      <InArgument x:TypeArguments="ui:WaitForReady" />
+                                    </ui:Target.WaitForReady>
+                                  </ui:Target>
+                                </p:CvClickWithDescriptor.Target>
+                              </p:CvClickWithDescriptor>
+                            </Sequence>
+                          </ActivityAction>
+                        </p:CVScope.Body>
+                        <p:CVScope.DesignTimeCache>
+                          <uc:CVCache CvUiElements="{x:Null}" OcrTexts="{x:Null}" DataSent="False" />
+                        </p:CVScope.DesignTimeCache>
+                        <p:CVScope.DesignTimeCacheContainer>
+                          <uc:CvCacheContainer>
+                            <uc:CvCacheContainer.Caches>
+                              <scg:List x:TypeArguments="uc:CVCache" Capacity="1">
+                                <uc:CVCache DataSent="False" DisplayName="Screen CV Click - 'Copiar text (Main)" Id="e1c4e34b-3ce4-4a35-b297-fff6d978f9ce" InformativeScreenshot="1d54655b70dd833fc7c2b93dcbfdb9a5" LogicalPosition="1448, 238" OcrText="C49R Copiar Buscar Texto Traducir C49R Copiar texto Escuchar v www.globalindustrial.com &gt; ... Sweepers Cat® C49R Auto Ride-On Sweeper, 49&quot; Cleaning Path Calificacion 5,0 (2) US$ 13.999,95 Disponible ¿Te han sido utiles estos resultados? Si No" Position="1448, 238" ScaleFactor="1.25" ScreenshotGuid="afc7c5c7-3ed3-4148-992a-1ca9952b4ae8" ServerVersion="1">
+                                  <uc:CVCache.CvAnchorRelations>
+                                    <scg:List x:TypeArguments="uc:AnchorRelationInfo" Capacity="0" />
+                                  </uc:CVCache.CvAnchorRelations>
+                                  <uc:CVCache.CvUiElements>
+                                    <scg:List x:TypeArguments="uc:CvElementInfo" Capacity="64">
+                                      <uc:CvElementInfo Category="Icon" Region="165, 315, 19, 19" />
+                                      <uc:CvElementInfo Category="Icon" Region="18, 573, 19, 17" />
+                                      <uc:CvElementInfo Category="Button" Region="156, 307, 115, 35" />
+                                      <uc:CvElementInfo Category="Button" Region="14, 307, 136, 36" />
+                                      <uc:CvElementInfo Category="Button" Region="226, 110, 98, 38" />
+                                      <uc:CvElementInfo Category="Icon" Region="24, 313, 19, 20" />
+                                      <uc:CvElementInfo Category="Button" Region="58, 191, 81, 36" />
+                                      <uc:CvElementInfo Category="Button" Region="133, 190, 66, 36" />
+                                      <uc:CvElementInfo Category="Icon" Region="236, 118, 21, 21" />
+                                      <uc:CvElementInfo Category="Button" Region="291, 307, 36, 36" />
+                                      <uc:CvElementInfo Category="ArrowButton" Confidence="Runtime" Region="291, 305, 36, 37" />
+                                      <uc:CvElementInfo Category="Button" Confidence="Runtime" Region="200, 192, 85, 33" />
+                                      <uc:CvElementInfo Category="ArrowButton" Confidence="Runtime" Region="343, 588, 19, 18" />
+                                      <uc:CvElementInfo Category="ArrowButton" Confidence="Runtime" Region="340, 0, 21, 18" />
+                                      <uc:CvElementInfo Category="Icon" Confidence="Runtime" Region="297, 56, 24, 25" />
+                                      <uc:CvElementInfo Category="Icon" Confidence="Runtime" Region="182, 499, 16, 17" />
+                                      <uc:CvElementInfo Category="Icon" Confidence="Runtime" Region="291, 307, 36, 35" />
+                                      <uc:CvElementInfo Category="Icon" Confidence="Runtime" Region="134, 190, 65, 36" />
+                                      <uc:CvElementInfo Category="Icon" Confidence="Runtime" Region="21, 62, 20, 20" />
+                                      <uc:CvElementInfo Category="Icon" Confidence="Runtime" Region="130, 499, 15, 16" />
+                                      <uc:CvElementInfo Category="Icon" Confidence="Runtime" Region="144, 499, 14, 16" />
+                                      <uc:CvElementInfo Category="CheckBox" Confidence="Runtime" Region="24, 314, 17, 19" />
+                                      <uc:CvElementInfo Category="Button" Confidence="Runtime" Region="19, 574, 16, 15" />
+                                      <uc:CvElementInfo Category="CloseButton" Confidence="Runtime" Region="299, 59, 21, 24" />
+                                      <uc:CvElementInfo Category="InputBox" Confidence="Runtime" Region="156, 307, 116, 35" />
+                                      <uc:CvElementInfo Category="Icon" Confidence="Runtime" Region="156, 500, 15, 16" />
+                                      <uc:CvElementInfo Category="ArrowButton" Confidence="Runtime" Region="191, 420, 10, 12" />
+                                      <uc:CvElementInfo Category="ArrowButton" Confidence="Runtime" Region="21, 63, 21, 22" />
+                                      <uc:CvElementInfo Category="InputBox" Confidence="Runtime" Region="59, 190, 81, 35" />
+                                      <uc:CvElementInfo Category="InputBox" Confidence="Runtime" Region="14, 307, 136, 35" />
+                                      <uc:CvElementInfo Category="Icon" Confidence="Runtime" Region="170, 499, 14, 16" />
+                                      <uc:CvElementInfo Category="CloseButton" Confidence="Runtime" Region="292, 307, 35, 35" />
+                                      <uc:CvElementInfo Category="RadioButton" Confidence="Runtime" Region="292, 307, 35, 35" />
+                                      <uc:CvElementInfo Category="Icon" Confidence="Runtime" Region="60, 444, 20, 19" />
+                                      <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="14, 540, 324, 17" />
+                                      <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="290, 541, 20, 18" />
+                                      <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="288, 523, 24, 48" />
+                                      <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="287, 568, 53, 32" />
+                                      <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="231, 544, 105, 13" />
+                                      <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="288, 553, 38, 42" />
+                                      <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="295, 376, 28, 68" />
+                                      <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="0, 556, 351, 44" />
+                                      <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="311, 340, 31, 36" />
+                                    </scg:List>
+                                  </uc:CVCache.CvUiElements>
+                                  <uc:CVCache.OcrTexts>
+                                    <scg:List x:TypeArguments="uc:OcrTextInfo" Capacity="36">
+                                      <uc:OcrTextInfo Region="101, 80, 154, 49" Text="C49R" />
+                                      <uc:OcrTextInfo Region="261, 120, 46, 16" Text="Copiar" />
+                                      <uc:OcrTextInfo Region="69, 201, 48, 12" Text="Buscar" />
+                                      <uc:OcrTextInfo Region="146, 201, 38, 12" Text="Texto" />
+                                      <uc:OcrTextInfo Region="216, 200, 57, 13" Text="Traducir" />
+                                      <uc:OcrTextInfo Region="22, 264, 48, 16" Text="C49R" />
+                                      <uc:OcrTextInfo Region="48, 316, 46, 16" Text="Copiar" />
+                                      <uc:OcrTextInfo Region="97, 317, 36, 12" Text="texto" />
+                                      <uc:OcrTextInfo Region="190, 316, 64, 13" Text="Escuchar" />
+                                      <uc:OcrTextInfo Region="300, 318, 16, 10" Text="v" />
+                                      <uc:OcrTextInfo Region="32, 418, 158, 16" Text="www.globalindustrial.com" />
+                                      <uc:OcrTextInfo Region="192, 421, 5, 9" Text="&gt;" />
+                                      <uc:OcrTextInfo Region="201, 420, 12, 10" Text="..." />
+                                      <uc:OcrTextInfo Region="225, 418, 64, 16" Text="Sweepers" />
+                                      <uc:OcrTextInfo Region="32, 445, 48, 17" Text="Cat®" />
+                                      <uc:OcrTextInfo Region="84, 445, 52, 17" Text="C49R" />
+                                      <uc:OcrTextInfo Region="137, 445, 44, 17" Text="Auto" />
+                                      <uc:OcrTextInfo Region="185, 445, 74, 17" Text="Ride-On" />
+                                      <uc:OcrTextInfo Region="32, 472, 82, 21" Text="Sweeper," />
+                                      <uc:OcrTextInfo Region="120, 472, 30, 16" Text="49&quot;" />
+                                      <uc:OcrTextInfo Region="156, 472, 80, 21" Text="Cleaning" />
+                                      <uc:OcrTextInfo Region="240, 472, 41, 17" Text="Path" />
+                                      <uc:OcrTextInfo Region="32, 500, 72, 13" Text="Calificacion" />
+                                      <uc:OcrTextInfo Region="108, 500, 20, 16" Text="5,0" />
+                                      <uc:OcrTextInfo Region="200, 500, 18, 16" Text="(2)" />
+                                      <uc:OcrTextInfo Region="32, 522, 28, 14" Text="US$" />
+                                      <uc:OcrTextInfo Region="64, 524, 64, 14" Text="13.999,95" />
+                                      <uc:OcrTextInfo Region="137, 522, 66, 16" Text="Disponible" />
+                                      <uc:OcrTextInfo Region="44, 566, 22, 16" Text="¿Te" />
+                                      <uc:OcrTextInfo Region="68, 568, 21, 10" Text="han" />
+                                      <uc:OcrTextInfo Region="92, 568, 24, 12" Text="sido" />
+                                      <uc:OcrTextInfo Region="118, 568, 32, 12" Text="utiles" />
+                                      <uc:OcrTextInfo Region="152, 568, 32, 10" Text="estos" />
+                                      <uc:OcrTextInfo Region="44, 584, 66, 12" Text="resultados?" />
+                                      <uc:OcrTextInfo Region="232, 576, 13, 13" Text="Si" />
+                                      <uc:OcrTextInfo Region="292, 576, 20, 13" Text="No" />
+                                    </scg:List>
+                                  </uc:CVCache.OcrTexts>
+                                </uc:CVCache>
+                              </scg:List>
+                            </uc:CvCacheContainer.Caches>
+                          </uc:CvCacheContainer>
+                        </p:CVScope.DesignTimeCacheContainer>
+                        <p:CVScope.OCREngine>
+                          <ActivityFunc x:TypeArguments="sd:Image, scg:IEnumerable(scg:KeyValuePair(sd1:Rectangle, x:String))">
+                            <ActivityFunc.Argument>
+                              <DelegateInArgument x:TypeArguments="sd:Image" Name="Image" />
+                            </ActivityFunc.Argument>
+                            <p1:UiPathScreenOCR ApiKey="{x:Null}" Endpoint="{x:Null}" Output="{x:Null}" PredictionId="{x:Null}" Text="{x:Null}" UseLocalServer="{x:Null}" ComputeSkewAngle="False" ExtractWords="True" sap:VirtualizedContainerService.HintSize="200,25" sap2010:WorkflowViewState.IdRef="UiPathScreenOCR_6" Image="[Image]" Language="en" NoopExecution="False" Profile="Screen" Scale="1" Timeout="100000" />
+                          </ActivityFunc>
+                        </p:CVScope.OCREngine>
+                        <p:CVScope.Target>
+                          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="b95f7c2c-949e-40cb-bbc0-8bfc0d90686a" InformativeScreenshot="9e6d5d5039c044d9aeb5b7c999154b4b" Selector="&lt;webctrl tag='HEADER' /&gt;" WaitForReady="INTERACTIVE">
+                            <ui:Target.TimeoutMS>
+                              <InArgument x:TypeArguments="x:Int32" />
+                            </ui:Target.TimeoutMS>
+                          </ui:Target>
+                        </p:CVScope.Target>
+                        <p:CVScope.UseLocalServer>
+                          <InArgument x:TypeArguments="x:Boolean" />
+                        </p:CVScope.UseLocalServer>
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </p:CVScope>
+                      <p:CVScope ContinueOnError="{x:Null}" DelayBefore="{x:Null}" ScopeId="{x:Null}" Server="{x:Null}" CvMethod="ElementDetection, OCR" DesignTimeCacheId="40650e99-d97f-4143-8548-ea3a734732fe" DisplayName="CV Screen Scope 'grouping'" sap:VirtualizedContainerService.HintSize="388,52" sap2010:WorkflowViewState.IdRef="CVScope_7" SendOnPremData="False" Version="V6">
+                        <p:CVScope.Body>
+                          <ActivityAction x:TypeArguments="x:Object">
+                            <ActivityAction.Argument>
+                              <DelegateInArgument x:TypeArguments="x:Object" Name="CVSessionData" />
+                            </ActivityAction.Argument>
+                            <Sequence DisplayName="Do" sap2010:WorkflowViewState.IdRef="Sequence_21">
+                              <p:CvClickWithDescriptor DelayBefore="{x:Null}" DelayMS="{x:Null}" DelayScreenshotAfterScroll="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" Descriptor="[&quot;Target: InputBox (36,408,256,40)&quot; +&#xA;&quot;Anchor: Text 'Texto de la imagen:' (34,384,144,18)&quot;]" DesignTimeCacheId="40650e99-d97f-4143-8548-ea3a734732fe" DesignTimeScaleFactor="1.25" DisplayName="CV Click - InputBox" sap:VirtualizedContainerService.HintSize="400,185" sap2010:WorkflowViewState.IdRef="CvClickWithDescriptor_8" InformativeScreenshot="58b5f381400f7f2804af839cf32ec872" KeyModifiers="None" MouseButton="BTN_LEFT" NumberOfScrolls="2" ScrollDirection="None" Version="V6">
+                                <p:CvClickWithDescriptor.CursorPosition>
+                                  <ui:CursorPosition Position="Center">
+                                    <ui:CursorPosition.OffsetX>
+                                      <InArgument x:TypeArguments="x:Int32" />
+                                    </ui:CursorPosition.OffsetX>
+                                    <ui:CursorPosition.OffsetY>
+                                      <InArgument x:TypeArguments="x:Int32" />
+                                    </ui:CursorPosition.OffsetY>
+                                  </ui:CursorPosition>
+                                </p:CvClickWithDescriptor.CursorPosition>
+                                <p:CvClickWithDescriptor.DesignTimeDescriptor>
+                                  <uc:CvDescriptor Id="0b8826f8-9f40-4a96-b3ae-b0a24dc70504">
+                                    <uc:CvDescriptor.Anchors>
+                                      <x:Array Type="uc:CvElementDescriptor">
+                                        <uc:CvElementDescriptor CellExtraInfo="{x:Null}" DesignTimeArea="34, 384, 144, 18" ElementType="Text" Text="Texto de la imagen:" />
+                                      </x:Array>
+                                    </uc:CvDescriptor.Anchors>
+                                    <uc:CvDescriptor.Target>
+                                      <uc:CvElementDescriptor CellExtraInfo="{x:Null}" DesignTimeArea="36, 408, 256, 40" ElementType="InputBox" />
+                                    </uc:CvDescriptor.Target>
+                                  </uc:CvDescriptor>
+                                </p:CvClickWithDescriptor.DesignTimeDescriptor>
+                                <p:CvClickWithDescriptor.Target>
+                                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="1413d240-caba-494f-a486-145c0cf432fe">
+                                    <ui:Target.TimeoutMS>
+                                      <InArgument x:TypeArguments="x:Int32" />
+                                    </ui:Target.TimeoutMS>
+                                    <ui:Target.WaitForReady>
+                                      <InArgument x:TypeArguments="ui:WaitForReady" />
+                                    </ui:Target.WaitForReady>
+                                  </ui:Target>
+                                </p:CvClickWithDescriptor.Target>
+                              </p:CvClickWithDescriptor>
+                              <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="AQUI PEGA TEXTO" sap:VirtualizedContainerService.HintSize="400,153" sap2010:WorkflowViewState.IdRef="SendHotkey_2" Key="v" KeyModifiers="Ctrl" SpecialKey="False">
+                                <ui:SendHotkey.Target>
+                                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="96171121-0671-43b5-9a77-b019d7112d27" InformativeScreenshot="e4271dc147fad1441dacdee4450584c0" Selector="&lt;webctrl id='Captcha' tag='INPUT' /&gt;">
+                                    <ui:Target.TimeoutMS>
+                                      <InArgument x:TypeArguments="x:Int32" />
+                                    </ui:Target.TimeoutMS>
+                                    <ui:Target.WaitForReady>
+                                      <InArgument x:TypeArguments="ui:WaitForReady" />
+                                    </ui:Target.WaitForReady>
+                                  </ui:Target>
+                                </ui:SendHotkey.Target>
+                              </ui:SendHotkey>
+                              <p:CvClickWithDescriptor DelayBefore="{x:Null}" DelayScreenshotAfterScroll="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DelayMS="5000" Descriptor="[&quot;Target: Button (42,457,241,45)&quot; +&#xA;&quot;Anchor: Text 'INGRESAR' (114,469,97,18)&quot;]" DesignTimeCacheId="40650e99-d97f-4143-8548-ea3a734732fe" DesignTimeScaleFactor="1.25" DisplayName="CV Click - Button" sap:VirtualizedContainerService.HintSize="400,186.4" sap2010:WorkflowViewState.IdRef="CvClickWithDescriptor_9" InformativeScreenshot="8157a02c4f3772a8baa82b8d2c02836d" KeyModifiers="None" MouseButton="BTN_LEFT" NumberOfScrolls="2" ScrollDirection="None" Version="V6">
+                                <p:CvClickWithDescriptor.CursorPosition>
+                                  <ui:CursorPosition Position="Center">
+                                    <ui:CursorPosition.OffsetX>
+                                      <InArgument x:TypeArguments="x:Int32" />
+                                    </ui:CursorPosition.OffsetX>
+                                    <ui:CursorPosition.OffsetY>
+                                      <InArgument x:TypeArguments="x:Int32" />
+                                    </ui:CursorPosition.OffsetY>
+                                  </ui:CursorPosition>
+                                </p:CvClickWithDescriptor.CursorPosition>
+                                <p:CvClickWithDescriptor.DesignTimeDescriptor>
+                                  <uc:CvDescriptor Id="b4b4ecb2-3e95-4d43-b2f5-fb4e009906b0">
+                                    <uc:CvDescriptor.Anchors>
+                                      <x:Array Type="uc:CvElementDescriptor">
+                                        <uc:CvElementDescriptor CellExtraInfo="{x:Null}" DesignTimeArea="114, 469, 97, 18" ElementType="Text" Text="INGRESAR" />
+                                      </x:Array>
+                                    </uc:CvDescriptor.Anchors>
+                                    <uc:CvDescriptor.Target>
+                                      <uc:CvElementDescriptor CellExtraInfo="{x:Null}" DesignTimeArea="42, 457, 241, 45" ElementType="Button" />
+                                    </uc:CvDescriptor.Target>
+                                  </uc:CvDescriptor>
+                                </p:CvClickWithDescriptor.DesignTimeDescriptor>
+                                <p:CvClickWithDescriptor.Target>
+                                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="fa2ba94e-1401-4b30-ac56-ec1b922cc0d0">
+                                    <ui:Target.TimeoutMS>
+                                      <InArgument x:TypeArguments="x:Int32" />
+                                    </ui:Target.TimeoutMS>
+                                    <ui:Target.WaitForReady>
+                                      <InArgument x:TypeArguments="ui:WaitForReady" />
+                                    </ui:Target.WaitForReady>
+                                  </ui:Target>
+                                </p:CvClickWithDescriptor.Target>
+                              </p:CvClickWithDescriptor>
+                            </Sequence>
+                          </ActivityAction>
+                        </p:CVScope.Body>
+                        <p:CVScope.DesignTimeCache>
+                          <uc:CVCache CvUiElements="{x:Null}" OcrTexts="{x:Null}" DataSent="False" />
+                        </p:CVScope.DesignTimeCache>
+                        <p:CVScope.DesignTimeCacheContainer>
+                          <uc:CvCacheContainer>
+                            <uc:CvCacheContainer.Caches>
+                              <scg:List x:TypeArguments="uc:CVCache" Capacity="1">
+                                <uc:CVCache DataSent="False" DisplayName="Screen CV Click - 'Texto de la (Main)" Id="40650e99-d97f-4143-8548-ea3a734732fe" InformativeScreenshot="1edec874eeb9007b87a1ea0ee90d50c1" LogicalPosition="521, 213" OcrText="Iniciar Sesion Empleador Afiliado RUC: 8 5 0 20122620434 3 6 2 Usuario: 7 1 4 EMP0002 C49R 9 Texto de la imagen: Contrasena: Texto de la imagen INGRESAR ¿Olvidaste tu contrasena? ¿Tu usuario se bloqueo?" Position="521, 213" ScaleFactor="1.25" ScreenshotGuid="3d5a4524-67e3-4926-9936-6b44fefda2d8" ServerVersion="1">
+                                  <uc:CVCache.CvAnchorRelations>
+                                    <scg:List x:TypeArguments="uc:AnchorRelationInfo" Capacity="4">
+                                      <uc:AnchorRelationInfo IsTargetText="False" Target="7">
+                                        <uc:AnchorRelationInfo.Anchors>
+                                          <x:Array Type="x:Int32">
+                                            <x:Int32>23</x:Int32>
+                                          </x:Array>
+                                        </uc:AnchorRelationInfo.Anchors>
+                                      </uc:AnchorRelationInfo>
+                                      <uc:AnchorRelationInfo IsTargetText="False" Target="3">
+                                        <uc:AnchorRelationInfo.Anchors>
+                                          <x:Array Type="x:Int32">
+                                            <x:Int32>12</x:Int32>
+                                          </x:Array>
+                                        </uc:AnchorRelationInfo.Anchors>
+                                      </uc:AnchorRelationInfo>
+                                      <uc:AnchorRelationInfo IsTargetText="False" Target="9">
+                                        <uc:AnchorRelationInfo.Anchors>
+                                          <x:Array Type="x:Int32">
+                                            <x:Int32>19</x:Int32>
+                                            <x:Int32>20</x:Int32>
+                                            <x:Int32>21</x:Int32>
+                                            <x:Int32>22</x:Int32>
+                                          </x:Array>
+                                        </uc:AnchorRelationInfo.Anchors>
+                                      </uc:AnchorRelationInfo>
+                                      <uc:AnchorRelationInfo IsTargetText="False" Target="5">
+                                        <uc:AnchorRelationInfo.Anchors>
+                                          <x:Array Type="x:Int32">
+                                            <x:Int32>4</x:Int32>
+                                          </x:Array>
+                                        </uc:AnchorRelationInfo.Anchors>
+                                      </uc:AnchorRelationInfo>
+                                    </scg:List>
+                                  </uc:CVCache.CvAnchorRelations>
+                                  <uc:CVCache.CvUiElements>
+                                    <scg:List x:TypeArguments="uc:CvElementInfo" Capacity="64">
+                                      <uc:CvElementInfo Category="Button" Region="411, 230, 69, 44" />
+                                      <uc:CvElementInfo Category="Button" Region="411, 273, 69, 44" />
+                                      <uc:CvElementInfo Category="Button" Region="337, 273, 68, 45" />
+                                      <uc:CvElementInfo Category="InputBox" Region="36, 292, 253, 40" />
+                                      <uc:CvElementInfo Category="Button" Region="42, 457, 241, 45" />
+                                      <uc:CvElementInfo Category="InputBox" Region="36, 208, 256, 41" />
+                                      <uc:CvElementInfo Category="Button" Region="411, 184, 69, 46" />
+                                      <uc:CvElementInfo Category="InputBox" Region="319, 405, 256, 40" />
+                                      <uc:CvElementInfo Category="Button" Region="486, 273, 69, 44" />
+                                      <uc:CvElementInfo Category="InputBox" Region="36, 408, 256, 40" />
+                                      <uc:CvElementInfo Category="Button" Region="487, 230, 68, 44" />
+                                      <uc:CvElementInfo Category="Button" Region="486, 184, 69, 46" />
+                                      <uc:CvElementInfo Category="Button" Region="336, 184, 69, 47" />
+                                      <uc:CvElementInfo Category="Button" Region="336, 230, 68, 44" />
+                                      <uc:CvElementInfo Category="Button" Region="486, 318, 68, 44" />
+                                      <uc:CvElementInfo Category="Button" Region="411, 318, 69, 45" />
+                                      <uc:CvElementInfo Category="Button" Region="20, 105, 135, 51" />
+                                      <uc:CvElementInfo Category="Button" Region="336, 318, 69, 44" />
+                                      <uc:CvElementInfo Category="Icon" Region="505, 326, 31, 28" />
+                                      <uc:CvElementInfo Category="Icon" Region="353, 323, 35, 32" />
+                                      <uc:CvElementInfo Category="InputBox" Confidence="Runtime" Region="159, 112, 440, 43" />
+                                      <uc:CvElementInfo Category="Button" Confidence="Runtime" Region="39, 338, 100, 33" />
+                                      <uc:CvElementInfo Category="InputBox" Confidence="Runtime" Region="411, 317, 70, 46" />
+                                      <uc:CvElementInfo Category="ArrowButton" Confidence="Runtime" Region="505, 326, 31, 28" />
+                                      <uc:CvElementInfo Category="Icon" Confidence="Runtime" Region="410, 318, 70, 45" />
+                                      <uc:CvElementInfo Category="Icon" Confidence="Runtime" Region="321, 408, 52, 35" />
+                                      <uc:CvElementInfo Category="Icon" Confidence="Runtime" Region="409, 184, 72, 47" />
+                                      <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="483, 228, 80, 43" />
+                                      <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="481, 272, 88, 43" />
+                                      <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="341, 228, 135, 44" />
+                                      <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="405, 227, 148, 45" />
+                                      <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="478, 181, 89, 44" />
+                                      <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="342, 269, 108, 45" />
+                                      <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="141, 56, 40, 7" />
+                                      <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="408, 269, 76, 48" />
+                                      <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="550, 219, 35, 8" />
+                                    </scg:List>
+                                  </uc:CVCache.CvUiElements>
+                                  <uc:CVCache.OcrTexts>
+                                    <scg:List x:TypeArguments="uc:OcrTextInfo" Capacity="36">
+                                      <uc:OcrTextInfo Region="20, 52, 90, 26" Text="Iniciar" />
+                                      <uc:OcrTextInfo Region="116, 50, 96, 28" Text="Sesion" />
+                                      <uc:OcrTextInfo Region="36, 121, 100, 24" Text="Empleador" />
+                                      <uc:OcrTextInfo Region="168, 121, 76, 18" Text="Afiliado" />
+                                      <uc:OcrTextInfo Region="36, 184, 36, 13" Text="RUC:" />
+                                      <uc:OcrTextInfo Region="364, 196, 13, 18" Text="8" />
+                                      <uc:OcrTextInfo Region="440, 196, 12, 18" Text="5" />
+                                      <uc:OcrTextInfo Region="514, 197, 12, 17" Text="0" />
+                                      <uc:OcrTextInfo Region="42, 220, 98, 14" Text="20122620434" />
+                                      <uc:OcrTextInfo Region="365, 241, 12, 17" Text="3" />
+                                      <uc:OcrTextInfo Region="440, 240, 13, 18" Text="6" />
+                                      <uc:OcrTextInfo Region="514, 241, 12, 17" Text="2" />
+                                      <uc:OcrTextInfo Region="36, 266, 60, 14" Text="Usuario:" />
+                                      <uc:OcrTextInfo Region="365, 286, 12, 16" Text="7" />
+                                      <uc:OcrTextInfo Region="440, 285, 10, 18" Text="1" />
+                                      <uc:OcrTextInfo Region="513, 286, 14, 17" Text="4" />
+                                      <uc:OcrTextInfo Region="44, 304, 68, 14" Text="EMP0002" />
+                                      <uc:OcrTextInfo Region="65, 345, 53, 18" Text="C49R" />
+                                      <uc:OcrTextInfo Region="440, 330, 12, 18" Text="9" />
+                                      <uc:OcrTextInfo Region="34, 384, 41, 14" Text="Texto" />
+                                      <uc:OcrTextInfo Region="78, 384, 20, 14" Text="de" />
+                                      <uc:OcrTextInfo Region="101, 384, 13, 14" Text="la" />
+                                      <uc:OcrTextInfo Region="118, 384, 60, 18" Text="imagen:" />
+                                      <uc:OcrTextInfo Region="318, 380, 88, 16" Text="Contrasena:" />
+                                      <uc:OcrTextInfo Region="42, 421, 40, 13" Text="Texto" />
+                                      <uc:OcrTextInfo Region="86, 420, 20, 14" Text="de" />
+                                      <uc:OcrTextInfo Region="109, 420, 12, 14" Text="la" />
+                                      <uc:OcrTextInfo Region="125, 420, 56, 18" Text="imagen" />
+                                      <uc:OcrTextInfo Region="114, 469, 97, 18" Text="INGRESAR" />
+                                      <uc:OcrTextInfo Region="353, 465, 76, 16" Text="¿Olvidaste" />
+                                      <uc:OcrTextInfo Region="432, 468, 16, 13" Text="tu" />
+                                      <uc:OcrTextInfo Region="450, 465, 89, 16" Text="contrasena?" />
+                                      <uc:OcrTextInfo Region="358, 504, 25, 17" Text="¿Tu" />
+                                      <uc:OcrTextInfo Region="386, 504, 56, 13" Text="usuario" />
+                                      <uc:OcrTextInfo Region="444, 508, 17, 10" Text="se" />
+                                      <uc:OcrTextInfo Region="464, 504, 69, 18" Text="bloqueo?" />
+                                    </scg:List>
+                                  </uc:CVCache.OcrTexts>
+                                </uc:CVCache>
+                              </scg:List>
+                            </uc:CvCacheContainer.Caches>
+                          </uc:CvCacheContainer>
+                        </p:CVScope.DesignTimeCacheContainer>
+                        <p:CVScope.OCREngine>
+                          <ActivityFunc x:TypeArguments="sd:Image, scg:IEnumerable(scg:KeyValuePair(sd1:Rectangle, x:String))">
+                            <ActivityFunc.Argument>
+                              <DelegateInArgument x:TypeArguments="sd:Image" Name="Image" />
+                            </ActivityFunc.Argument>
+                            <p1:UiPathScreenOCR ApiKey="{x:Null}" Endpoint="{x:Null}" Output="{x:Null}" PredictionId="{x:Null}" Text="{x:Null}" UseLocalServer="{x:Null}" ComputeSkewAngle="False" ExtractWords="True" sap:VirtualizedContainerService.HintSize="200,25" sap2010:WorkflowViewState.IdRef="UiPathScreenOCR_7" Image="[Image]" Language="en" NoopExecution="False" Profile="Screen" Scale="1" Timeout="100000" />
+                          </ActivityFunc>
+                        </p:CVScope.OCREngine>
+                        <p:CVScope.Target>
+                          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="b561f6dc-1fd3-4b62-a7fc-6103c265fb1f" InformativeScreenshot="29cdeef347f30c8b62e6ed1516348d6b" Selector="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='AFPnet - Google Chrome' /&gt;&lt;ctrl name='AFPnet' role='document' /&gt;&lt;ctrl idx='32' role='grouping' /&gt;" WaitForReady="COMPLETE">
+                            <ui:Target.TimeoutMS>
+                              <InArgument x:TypeArguments="x:Int32" />
+                            </ui:Target.TimeoutMS>
+                          </ui:Target>
+                        </p:CVScope.Target>
+                        <p:CVScope.UseLocalServer>
+                          <InArgument x:TypeArguments="x:Boolean" />
+                        </p:CVScope.UseLocalServer>
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </p:CVScope>
+                    </Sequence>
+                  </ui:CommentOut.Body>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </ui:CommentOut>
+              </Sequence>
+            </Sequence>
+            <ui:UiElementExists DisplayName="Element Exists 'cell COMUNICADO'" Exists="[boolLoginExitoso]" sap:VirtualizedContainerService.HintSize="512,107" sap2010:WorkflowViewState.IdRef="UiElementExists_2">
+              <ui:UiElementExists.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="28ee7d76-b9e2-4b18-b750-0be27d3b66d2" InformativeScreenshot="8092e334beec9d5a5e292df7536e7b42" Selector="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='AFPnet - Google Chrome' /&gt;&lt;ctrl name='AFPnet' role='document' /&gt;&lt;ctrl role='row' /&gt;&lt;ctrl name='COMUNICADO A EMPLEADORES' role='cell' /&gt;" TimeoutMS="10000">
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:UiElementExists.Target>
+            </ui:UiElementExists>
+            <If Condition="[boolLoginExitoso]" sap:VirtualizedContainerService.HintSize="512,801" sap2010:WorkflowViewState.IdRef="If_2">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <If.Then>
+                <Sequence sap:VirtualizedContainerService.HintSize="376,619" sap2010:WorkflowViewState.IdRef="Sequence_11">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,141" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Se ha logeado correctamente&quot;]" />
+                  <ui:ClickImage DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" ContinueOnError="True" DisplayName="Click &quot;Cerrar Mensaje por Defecto&quot;" sap:VirtualizedContainerService.HintSize="334,155" sap2010:WorkflowViewState.IdRef="ClickImage_9" KeyModifiers="None" MouseButton="BTN_LEFT">
+                    <ui:ClickImage.CursorPosition>
+                      <ui:CursorPosition Position="Center">
+                        <ui:CursorPosition.OffsetX>
+                          <InArgument x:TypeArguments="x:Int32" />
+                        </ui:CursorPosition.OffsetX>
+                        <ui:CursorPosition.OffsetY>
+                          <InArgument x:TypeArguments="x:Int32" />
+                        </ui:CursorPosition.OffsetY>
+                      </ui:CursorPosition>
+                    </ui:ClickImage.CursorPosition>
+                    <ui:ClickImage.Image>
+                      <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" Profile="Basic" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAABgAAAAXCAYAAAARIY8tAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAEpSURBVEhL7ZIxT4NAGIb9O+x1IZUcJITUGZXB1p9o4tjBjYoxJE2NWu7axKWWymBDC2o7vHIkmBKIHDZOMjzLXb73Sd7vO3h5jfCXNIJK/olgtljj8qqP0eNz4c+5e0D/elB4zxASuEMPuq7DPDnLSezbEQhR0e1d4InNcjMZQoJwvcF47EHTtG9JGq6qsCwLc9/HW/hZOiu8g1W0gefRVNJuH6HVOkzD/SR8uSoP59RaMpfcOA4kSYKiKGCM/RjOqSXgtahJLYQQyLIM0zwtXfwuwoLdzn1/AUopDMNIdzK8n5bOcIQEPKDTOc51zuuilKWS825vvytahh+w7QGCIMh1ziWTyRSu6+53RfMgRvy+TUTFEH7CUbwtvGfUWvJvaASVNIIKInwBGkXmytQUC0wAAAAASUVORK5CYII=" />
+                    </ui:ClickImage.Image>
+                    <ui:ClickImage.Target>
+                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="958a5432-de69-411f-bad1-17464f467ec2" TimeoutMS="5000">
+                        <ui:Target.WaitForReady>
+                          <InArgument x:TypeArguments="ui:WaitForReady" />
+                        </ui:Target.WaitForReady>
+                      </ui:Target>
+                    </ui:ClickImage.Target>
+                  </ui:ClickImage>
+                  <ui:ClickImage DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" ContinueOnError="True" DisplayName="Click &quot;Cerrar Google Lens&quot;" sap:VirtualizedContainerService.HintSize="334,155" sap2010:WorkflowViewState.IdRef="ClickImage_10" KeyModifiers="None" MouseButton="BTN_LEFT">
+                    <ui:ClickImage.CursorPosition>
+                      <ui:CursorPosition Position="Center">
+                        <ui:CursorPosition.OffsetX>
+                          <InArgument x:TypeArguments="x:Int32" />
+                        </ui:CursorPosition.OffsetX>
+                        <ui:CursorPosition.OffsetY>
+                          <InArgument x:TypeArguments="x:Int32" />
+                        </ui:CursorPosition.OffsetY>
+                      </ui:CursorPosition>
+                    </ui:ClickImage.CursorPosition>
+                    <ui:ClickImage.Image>
+                      <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" Profile="Basic" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAABgAAAAUCAYAAACXtf2DAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADFSURBVEhL7ZJhCsIwDIU9ioIHU+v0pzK6Wax6hq3VI247xFgjLwwEt9kiiIL7IFBewnuQdEIfZgzw8gcBZVlRlhtyzrXKA2joYWYIb4CxV5rO5hTHkpqmaVXiNzT0MDNE0Ir06cJGUbSluq658IaG3iuCb6D1mQ3FekOLpQgyB8EB2PduH7MxKklV712e+Z0ApY5svBIRF95Ym4/vHzk3lo1kcuh8UylT7ll7a9Uu3oCiKDmkb9/QsszwzBDBN3iXMcAD0R3N0hvFpS+bzQAAAABJRU5ErkJggg==" />
+                    </ui:ClickImage.Image>
+                    <ui:ClickImage.Target>
+                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="ee0cce92-d713-4226-9a75-becfa0adc22c" TimeoutMS="2000">
+                        <ui:Target.WaitForReady>
+                          <InArgument x:TypeArguments="ui:WaitForReady" />
+                        </ui:Target.WaitForReady>
+                      </ui:Target>
+                    </ui:ClickImage.Target>
+                  </ui:ClickImage>
+                </Sequence>
+              </If.Then>
+              <If.Else>
+                <Sequence sap2010:WorkflowViewState.IdRef="Sequence_12" />
+              </If.Else>
+            </If>
+            <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'A  #menu-4'" sap:VirtualizedContainerService.HintSize="512,107" sap2010:WorkflowViewState.IdRef="Click_8" KeyModifiers="None" MouseButton="BTN_LEFT">
+              <ui:Click.CursorPosition>
+                <ui:CursorPosition Position="Center">
+                  <ui:CursorPosition.OffsetX>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetX>
+                  <ui:CursorPosition.OffsetY>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetY>
+                </ui:CursorPosition>
+              </ui:Click.CursorPosition>
+              <ui:Click.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="75856e71-fbf2-46f8-95ab-1480f2985a83" InformativeScreenshot="65173c26ae1db609ca605acc58d6268b" Selector="&lt;webctrl aaname='Afiliados' parentid='sidebar' tag='A' /&gt;&lt;nav up='1' /&gt;&lt;webctrl aaname='Afiliados' parentid='sidebar' tag='A' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:Click.Target>
+            </ui:Click>
+            <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'A '" sap:VirtualizedContainerService.HintSize="512,107" sap2010:WorkflowViewState.IdRef="Click_9" KeyModifiers="None" MouseButton="BTN_LEFT">
+              <ui:Click.CursorPosition>
+                <ui:CursorPosition Position="Center">
+                  <ui:CursorPosition.OffsetX>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetX>
+                  <ui:CursorPosition.OffsetY>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetY>
+                </ui:CursorPosition>
+              </ui:Click.CursorPosition>
+              <ui:Click.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="a8534954-e8c0-442d-bd06-296e452fd5cf" InformativeScreenshot="622fa94b3c4dcfeb9a6ecf861b2c8ffd" Selector="&lt;webctrl aaname='Consulta de Afiliados Masiva' parentid='menu-4' tag='A' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:Click.Target>
+            </ui:Click>
+          </Sequence>
+        </ActivityAction>
+      </ui:OpenBrowser.Body>
+    </ui:OpenBrowser>
+  </Sequence>
+</Activity>

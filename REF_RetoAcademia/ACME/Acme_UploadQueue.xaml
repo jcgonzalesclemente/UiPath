@@ -2,11 +2,12 @@
   <x:Members>
     <x:Property Name="in_Config" Type="InArgument(scg:Dictionary(x:String, x:Object))" />
     <x:Property Name="in_DataRomania" Type="InArgument(sd:DataTable)" />
+    <x:Property Name="in_QueueName" Type="InArgument(x:String)" />
   </x:Members>
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>663,2261</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>655,603</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Acme_UploadQueue_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -40,6 +41,13 @@
       <x:String>System.Linq.Expressions</x:String>
       <x:String>System.ComponentModel</x:String>
       <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Platform.SyncObjects</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -91,9 +99,20 @@
       <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
       <AssemblyReference>System.Private.Xml</AssemblyReference>
       <AssemblyReference>System.Data.SqlClient</AssemblyReference>
+      <AssemblyReference>System.Linq.Async</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.AzureActiveDirectory.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.DataService.Activities.Core</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Acme_UploadQueue" sap:VirtualizedContainerService.HintSize="636,2196" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Acme_UploadQueue" sap:VirtualizedContainerService.HintSize="512,538" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="scg:IEnumerable(ui:QueueItem)" Name="ListProgress" />
       <Variable x:TypeArguments="scg:IEnumerable(ui:QueueItem)" Name="ListFailed" />
@@ -104,22 +123,22 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="574,173" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Inicio Acme UploadQueue&quot;]" />
-    <Sequence DisplayName="QueuesClear" sap:VirtualizedContainerService.HintSize="574,1545" sap2010:WorkflowViewState.IdRef="Sequence_2">
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="450,173" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Inicio Acme UploadQueue&quot;]" />
+    <Sequence DisplayName="QueuesClear" sap:VirtualizedContainerService.HintSize="450,113" sap2010:WorkflowViewState.IdRef="Sequence_2">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <Sequence DisplayName="ClearQueuesProgress" sap:VirtualizedContainerService.HintSize="512,1084" sap2010:WorkflowViewState.IdRef="Sequence_4">
+      <Sequence DisplayName="ClearQueuesProgress" sap:VirtualizedContainerService.HintSize="450,113" sap2010:WorkflowViewState.IdRef="Sequence_4">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
-            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
             <x:Boolean x:Key="IsPinned">False</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
-        <ui:GetQueueItems Duration="{x:Null}" From="{x:Null}" Priority="{x:Null}" Reference="{x:Null}" Skip="{x:Null}" TimeoutMS="{x:Null}" To="{x:Null}" Top="{x:Null}" DisplayName="Get Queue Items" FilterStrategy="StartsWith" FolderPath="in_Config(&quot;OrchestratorQueueFolder&quot;).ToString" sap:VirtualizedContainerService.HintSize="450,175" sap2010:WorkflowViewState.IdRef="GetQueueItems_1" QueueItemStates="InProgress" QueueName="[in_Config(&quot;OrchestratorQueueName&quot;).ToString]" Result="[ListProgress]" />
+        <ui:GetQueueItems Duration="{x:Null}" From="{x:Null}" Priority="{x:Null}" Reference="{x:Null}" Skip="{x:Null}" TimeoutMS="{x:Null}" To="{x:Null}" Top="{x:Null}" DisplayName="Get Queue Items" FilterStrategy="StartsWith" FolderPath="[in_Config(&quot;OrchestratorQueueFolder&quot;).ToString]" sap:VirtualizedContainerService.HintSize="450,175" sap2010:WorkflowViewState.IdRef="GetQueueItems_1" QueueItemStates="InProgress" QueueName="[in_Config(&quot;OrchestratorQueueName&quot;).ToString]" Result="[ListProgress]" />
         <ui:ForEach x:TypeArguments="ui:QueueItem" CurrentIndex="{x:Null}" DisplayName="For Each item" sap:VirtualizedContainerService.HintSize="450,448" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[ListProgress]">
           <ui:ForEach.Body>
             <ActivityAction x:TypeArguments="ui:QueueItem">
@@ -132,7 +151,7 @@
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <ui:SetTransactionStatus ContinueOnError="{x:Null}" ServiceBaseAddress="{x:Null}" TimeoutMS="{x:Null}" DisplayName="Set Transaction Status" ErrorType="Application" FolderPath="in_Config(&quot;OrchestratorQueueFolder&quot;).ToString" sap:VirtualizedContainerService.HintSize="354,214" sap2010:WorkflowViewState.IdRef="SetTransactionStatus_1" Reason="Data in Progress ERROR" Status="Successful" TransactionItem="[item]">
+                <ui:SetTransactionStatus ContinueOnError="{x:Null}" ServiceBaseAddress="{x:Null}" TimeoutMS="{x:Null}" DisplayName="Set Transaction Status" ErrorType="Application" FolderPath="[in_Config(&quot;OrchestratorQueueFolder&quot;).ToString]" sap:VirtualizedContainerService.HintSize="354,214" sap2010:WorkflowViewState.IdRef="SetTransactionStatus_1" Reason="Data in Progress ERROR" Status="Successful" TransactionItem="[item]">
                   <ui:SetTransactionStatus.Analytics>
                     <scg:Dictionary x:TypeArguments="x:String, InArgument" />
                   </ui:SetTransactionStatus.Analytics>
@@ -150,11 +169,11 @@
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
         </ui:ForEach>
-        <ui:GetQueueItems Duration="{x:Null}" From="{x:Null}" Priority="{x:Null}" Reference="{x:Null}" Skip="{x:Null}" TimeoutMS="{x:Null}" To="{x:Null}" Top="{x:Null}" DisplayName="Get Queue Items" FilterStrategy="StartsWith" FolderPath="in_Config(&quot;OrchestratorQueueFolder&quot;).ToString" sap:VirtualizedContainerService.HintSize="450,175" sap2010:WorkflowViewState.IdRef="GetQueueItems_2" QueueItemStates="Failed" QueueName="in_Config(&quot;OrchestratorQueueName&quot;).ToString" Result="[ListFailed]" />
-        <ui:DeleteQueueItems TimeoutMS="{x:Null}" DisplayName="Delete Queue Items" FolderPath="in_Config(&quot;OrchestratorQueueFolder&quot;).ToString" sap:VirtualizedContainerService.HintSize="450,166" sap2010:WorkflowViewState.IdRef="DeleteQueueItems_1" QueueItems="[ListFailed]" />
+        <ui:GetQueueItems Duration="{x:Null}" From="{x:Null}" Priority="{x:Null}" Reference="{x:Null}" Skip="{x:Null}" TimeoutMS="{x:Null}" To="{x:Null}" Top="{x:Null}" DisplayName="Get Queue Items" FilterStrategy="StartsWith" FolderPath="[in_Config(&quot;OrchestratorQueueFolder&quot;).ToString]" sap:VirtualizedContainerService.HintSize="450,175" sap2010:WorkflowViewState.IdRef="GetQueueItems_2" QueueItemStates="Failed" QueueName="[in_Config(&quot;OrchestratorQueueName&quot;).ToString]" Result="[ListFailed]" />
+        <ui:DeleteQueueItems TimeoutMS="{x:Null}" DisplayName="Delete Queue Items" FolderPath="[in_Config(&quot;OrchestratorQueueFolder&quot;).ToString]" sap:VirtualizedContainerService.HintSize="450,166" sap2010:WorkflowViewState.IdRef="DeleteQueueItems_1" QueueItems="[ListFailed]" />
       </Sequence>
-      <ui:GetQueueItems Duration="{x:Null}" From="{x:Null}" Priority="{x:Null}" Reference="{x:Null}" Skip="{x:Null}" TimeoutMS="{x:Null}" To="{x:Null}" Top="{x:Null}" DisplayName="Get Queue Items" FilterStrategy="StartsWith" FolderPath="in_Config(&quot;OrchestratorQueueFolder&quot;).ToString" sap:VirtualizedContainerService.HintSize="512,175" sap2010:WorkflowViewState.IdRef="GetQueueItems_3" QueueItemStates="New, InProgress, Failed, Successful, Abandoned, Retried, Deleted" QueueName="in_Config(&quot;OrchestratorQueueName&quot;).ToString" Result="[QueueAll]" />
-      <ui:DeleteQueueItems TimeoutMS="{x:Null}" DisplayName="Delete Queue Items" FolderPath="in_Config(&quot;OrchestratorQueueFolder&quot;).ToString" sap:VirtualizedContainerService.HintSize="512,166" sap2010:WorkflowViewState.IdRef="DeleteQueueItems_2" QueueItems="[QueueAll]">
+      <ui:GetQueueItems Duration="{x:Null}" From="{x:Null}" Priority="{x:Null}" Reference="{x:Null}" Skip="{x:Null}" TimeoutMS="{x:Null}" To="{x:Null}" Top="{x:Null}" DisplayName="Get Queue Items" FilterStrategy="StartsWith" FolderPath="[in_Config(&quot;OrchestratorQueueFolder&quot;).ToString]" sap:VirtualizedContainerService.HintSize="450,175" sap2010:WorkflowViewState.IdRef="GetQueueItems_3" QueueItemStates="New, InProgress, Failed, Successful, Abandoned, Retried, Deleted" QueueName="[in_Config(&quot;OrchestratorQueueName&quot;).ToString]" Result="[QueueAll]" />
+      <ui:DeleteQueueItems TimeoutMS="{x:Null}" DisplayName="Delete Queue Items" FolderPath="[in_Config(&quot;OrchestratorQueueFolder&quot;).ToString]" sap:VirtualizedContainerService.HintSize="450,166" sap2010:WorkflowViewState.IdRef="DeleteQueueItems_2" QueueItems="[QueueAll]">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -163,7 +182,6 @@
         </sap:WorkflowViewStateService.ViewState>
       </ui:DeleteQueueItems>
     </Sequence>
-    <ui:BulkAddQueueItems TimeoutMS="{x:Null}" DisplayName="Bulk Add Queue Items" FolderPath="in_Config(&quot;OrchestratorQueueFolder&quot;).ToString" sap:VirtualizedContainerService.HintSize="574,226" sap2010:WorkflowViewState.IdRef="BulkAddQueueItems_1" QueueItemsDataTable="[in_DataRomania]" QueueName="in_Config(&quot;OrchestratorQueueName&quot;).ToString" />
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="574,164" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;Fin Acme UploadQueue&quot;]" />
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="450,164" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;Fin Acme UploadQueue&quot;]" />
   </Sequence>
 </Activity>

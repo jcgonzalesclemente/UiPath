@@ -1,0 +1,134 @@
+﻿<p>&nbsp;</p>
+<!-- [if !mso]--><!-- -->
+<p> </p>
+<!--<![endif]--><!-- [if gte mso 9]><style type=”text/css”>
+        body {
+        font-family: arial, sans-serif!important;
+        }
+        </style>
+    <![endif]--><!-- pre-header -->
+<table style="display: none!important;">
+<tbody>
+<tr>
+<td>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+<!-- pre-header end -->
+<p></p>
+<!-- header -->
+<table border="0" width="100%" cellspacing="0" cellpadding="0" bgcolor="ffffff">
+<tbody>
+<tr>
+<td align="center">
+<table class="container590" border="0" width="590" cellspacing="0" cellpadding="0" align="center">
+<tbody>
+<tr>
+<td style="font-size: 25px; line-height: 25px;" height="25">&nbsp;</td>
+</tr>
+<tr>
+<td style="font-size: 25px; line-height: 25px;" height="25">&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+<!-- end header -->
+<p></p>
+<!-- big image section -->
+<table class="bg_color" border="0" width="100%" cellspacing="0" cellpadding="0" bgcolor="ffffff">
+<tbody>
+<tr>
+<td align="center">
+<table class="container590" border="0" width="590" cellspacing="0" cellpadding="0" align="center">
+<tbody>
+<tr>
+<td class="main-header" style="color: #343434; font-size: 24px; font-family: Quicksand, Calibri, sans-serif; font-weight: bold; letter-spacing: 3px; line-height: 35px;" align="center"><!-- section text ======-->
+<div style="line-height: 35px;"><span style="color: #5caad2;">Resultado de Reporte Tipo Cambio</span></div>
+<div style="line-height: 25px;"><span style="color: #5caad2;">Terminada Correctamente</span></div>
+</td>
+</tr>
+<tr>
+<td style="font-size: 10px; line-height: 10px;" height="10">&nbsp;</td>
+</tr>
+<tr>
+<td align="center">
+<table border="0" width="40" cellspacing="0" cellpadding="0" align="center" bgcolor="eeeeee">
+<tbody>
+<tr>
+<td style="font-size: 2px; line-height: 2px;" height="2">&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr>
+<td style="font-size: 20px; line-height: 20px;" height="20">&nbsp;</td>
+</tr>
+<tr>
+<td align="left">
+<table class="container590" border="0" width="650" cellspacing="0" cellpadding="0" align="center">
+<tbody>
+<tr>
+<td style="color: #888888; font-size: 16px; font-family: 'Work Sans', Calibri, sans-serif; line-height: 24px;" align="left"><!-- section text ======-->
+<p style="line-height: 24px; margin-bottom: 15px; text-align: justify; text-justify: inter-word;"><!-- section Subtitulo ======--> <!-- {{SUBTITULO}} ======--> Estimado/a,</p>
+<p style="line-height: 24px; margin-bottom: 15px; text-align: justify; text-justify: inter-word;">Este email es porque no se ha encontrado el reporte correspondiente.</p>
+<p style="line-height: 24px; margin-bottom: 15px; text-align: justify; text-justify: inter-word;">vStrRutaReporte</a></p>
+<p style="line-height: 24px; margin-bottom: 15px; text-align: justify; text-justify: inter-word;">Cualquier duda o consulta, por favor contactar al administrador.</p>
+<p style="line-height: 24px; text-align: justify; text-justify: inter-word;">Saludos cordiales.</p>
+    <p style="line-height: 24px; text-align: justify; text-justify: inter-word;">RPA INNOVABI
+    <br><a href="https://http://www.innovabi.pe">http://www.innovabi.pe</a>
+    <br>Santa Anita 
+    <br>Provincia, Lima
+    <br>Juan Gonzales, Desarrollador RPA UiPath
+    <br><a href="https://www.innovabi.pe"><img src="https://www.innovabi.pe/wp-content/uploads/2021/06/logo2-innova.png"  alt="logo INNOVABI" height="60"></a>
+    </p>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr>
+<td style="font-size: 40px; line-height: 40px;" height="40">&nbsp;</td>
+</tr>
+</tbody>
+</table>
+<!-- end section -->
+<p></p>
+<!-- end section -->
+<p></p>
+<!-- contact section -->
+<table class="bg_color" border="0" width="100%" cellspacing="0" cellpadding="0" bgcolor="ffffff">
+<tbody>
+<tr>
+<td style="font-size: 60px; line-height: 60px;" height="60">&nbsp;</td>
+</tr>  
+<tr>
+<td style="font-size: 60px; line-height: 60px;" height="60">&nbsp;</td>
+</tr>
+</tbody>
+</table>
+<!-- end section -->
+<p></p>
+<!-- footer ====== -->
+<table border="0" width="100%" cellspacing="0" cellpadding="0" bgcolor="f4f4f4">
+<tbody>
+<tr>
+<td style="font-size: 25px; line-height: 25px;" height="25">&nbsp;</td>
+</tr>
+<tr>
+<td align="center">&nbsp;</td>
+</tr>
+<tr>
+<td style="font-size: 25px; line-height: 25px;" height="25">&nbsp;</td>
+</tr>
+</tbody>
+</table>
+<!-- end footer ====== -->

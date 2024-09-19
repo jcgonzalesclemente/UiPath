@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "qoHD4ect5DTVUu6h0Rujs0qjTRO7c5IHrTiL7uYv0JG3PSTB4ePz8bqHEc8DtzMieVUqQ1Bi4iw44WDaGFF+0w==",
+  "dgSpecHash": "+bJEQkxrQ6pPBtviquICYSLa99J77qFyD4n1o4giryj06p9rpBJWn/v2ZMxsq8lQ6bTmkgOHwsvTtzzqZxLj0w==",
   "success": true,
-  "projectFilePath": "C:\\Users\\carlo\\OneDrive\\Documents\\UiPath\\REF_SBS_Web\\.local\\",
+  "projectFilePath": "D:\\GIT_Repositorio\\Sesion1\\UiPath\\REF_SBS_Web\\.local\\",
   "expectedPackageFiles": [
     "C:\\Users\\carlo\\.nuget\\packages\\automapper\\9.0.0\\automapper.9.0.0.nupkg.sha512",
     "C:\\Users\\carlo\\.nuget\\packages\\azure.core\\1.18.0\\azure.core.1.18.0.nupkg.sha512",

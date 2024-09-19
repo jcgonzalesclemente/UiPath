@@ -21766,9 +21766,9 @@
     "restore": {
       "projectUniqueName": "REF_SBS_Web",
       "projectName": "REF_SBS_Web",
-      "projectPath": "C:\\Users\\carlo\\OneDrive\\Documents\\UiPath\\REF_SBS_Web\\.local",
+      "projectPath": "D:\\GIT_Repositorio\\Sesion1\\UiPath\\REF_SBS_Web\\.local",
       "packagesPath": "C:\\Users\\carlo\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\carlo\\OneDrive\\Documents\\UiPath\\REF_SBS_Web\\.local"
+      "outputPath": "D:\\GIT_Repositorio\\Sesion1\\UiPath\\REF_SBS_Web\\.local"
     },
     "frameworks": {
       "net8.0-windows7.0": {

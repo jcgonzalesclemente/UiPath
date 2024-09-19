@@ -12,6 +12,7 @@
       "Path": "Main.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
+        "LinkReport&StateMachine_1",
         "Pass&StateMachine_1",
         "User&StateMachine_1",
         "TransactionItem&StateMachine_1",
@@ -97,11 +98,11 @@
       "Path": "ACME/Acme_ExtractData.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
-        "intParImpar&Sequence_1",
-        "TaxID&Sequence_1",
-        "variable1&Sequence_6",
+        "n&Sequence_1",
         "IndexDeleted&Sequence_1",
-        "n&Sequence_1"
+        "TaxID&Sequence_1",
+        "intParImpar&Sequence_1",
+        "variable1&Sequence_6"
       ],
       "ArgumentsSectionElementsOrder": [
         "out_DataRomania",
@@ -119,6 +120,7 @@
         "ListProgress&Sequence_1"
       ],
       "ArgumentsSectionElementsOrder": [
+        "in_QueueName",
         "in_DataRomania",
         "in_Config"
       ],
@@ -128,8 +130,11 @@
     {
       "Path": "Framework/Process.xaml",
       "SortBy": 0,
-      "VariablesSectionElementsOrder": [],
+      "VariablesSectionElementsOrder": [
+        "out_LinkReport&Sequence_1"
+      ],
       "ArgumentsSectionElementsOrder": [
+        "out_LinkReport",
         "in_TransactionItem",
         "in_Config"
       ],
@@ -150,7 +155,10 @@
       "Path": "ACME/Acme_DowloadReports.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
-        "vFile&Sequence_7",
+        "dtMonthReport&Sequence_1",
+        "strRutaReport&Sequence_1",
+        "vFile&Sequence_1",
+        "dtYearReport&Sequence_1",
         "boolNoExisteReporte&Sequence_1",
         "boolExisteBusines&Sequence_1",
         "strMonth&Sequence_1",
@@ -160,6 +168,87 @@
       "ArgumentsSectionElementsOrder": [
         "out_YearReport",
         "in_TaxID"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Email/Email_SendMail.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "strUserMail&Sequence_1",
+        "secPass&Sequence_1",
+        "Body&Sequence_2",
+        "Body&Sequence_6",
+        "Body&Sequence_7"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_Config",
+        "in_BusinessException",
+        "in_Vendor",
+        "in_TaxID",
+        "in_SystemException",
+        "in_YearReport"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "EXCEL/EXCEL_CreateExcelReport.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "in_CountGeneral",
+        "in_Config",
+        "in_TransactionData",
+        "in_SystemException",
+        "in_BusinessException"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Framework/InitAllSettings.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "dt_SettingsAndConstants&Sequence_5",
+        "dt_Assets&Sequence_6",
+        "AssetValue&Sequence_11"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_ConfigFile",
+        "in_ConfigSheets",
+        "out_Config"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Framework/GetTransactionData.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "in_TransactionNumber",
+        "in_Config",
+        "out_TransactionItem",
+        "out_TransactionField1",
+        "out_TransactionField2",
+        "out_TransactionID",
+        "io_dt_TransactionData"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Email/Email_SendExceptionReport.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "strUserMail&Sequence_1",
+        "secPassword&Sequence_1",
+        "LogReport&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_Config"
       ],
       "ConstantsSectionElementsOrder": [],
       "AddedNamespaces": null

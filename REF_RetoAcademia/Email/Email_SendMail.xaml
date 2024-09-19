@@ -10,7 +10,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>663,2362</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>655,3125</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Email_SendMail_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -112,7 +112,7 @@
       <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Email_SendMail" sap:VirtualizedContainerService.HintSize="512,2297" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Email_SendMail" sap:VirtualizedContainerService.HintSize="512,3060" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="strUserMail" />
       <Variable x:TypeArguments="ss:SecureString" Name="secPass" />
@@ -123,7 +123,7 @@
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
     <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="450,173" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Inicio Email_SendMail&quot;]" />
-    <ui:GetRobotCredential TimeoutMS="{x:Null}" AssetName="in_Config(&quot;Asset_Mail&quot;).ToString" CacheStrategy="None" DisplayName="Get Credential" FolderPath="in_Config(&quot;OrchestratorQueueFolder&quot;).ToString" sap:VirtualizedContainerService.HintSize="450,175" sap2010:WorkflowViewState.IdRef="GetRobotCredential_1" Password="[secPass]" Username="[strUserMail]" />
+    <ui:GetRobotCredential TimeoutMS="{x:Null}" AssetName="[in_Config(&quot;Asset_Mail&quot;).ToString]" CacheStrategy="None" DisplayName="Get Credential" FolderPath="[in_Config(&quot;OrchestratorQueueFolder&quot;).ToString]" sap:VirtualizedContainerService.HintSize="450,175" sap2010:WorkflowViewState.IdRef="GetRobotCredential_1" Password="[secPass]" Username="[strUserMail]" />
     <If Condition="[in_BusinessException isNot Nothing]" DisplayName="If Business Exception" sap:VirtualizedContainerService.HintSize="450,820" sap2010:WorkflowViewState.IdRef="If_1">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -212,10 +212,10 @@
         </Sequence>
       </If.Else>
     </If>
-    <If Condition="[in_SystemException Is Nothing AND in_BusinessException isNot Nothing]" DisplayName="If Success Process" sap:VirtualizedContainerService.HintSize="450,57" sap2010:WorkflowViewState.IdRef="If_4">
+    <If Condition="[in_SystemException Is Nothing AND in_BusinessException isNot Nothing]" DisplayName="If Success Process" sap:VirtualizedContainerService.HintSize="450,820" sap2010:WorkflowViewState.IdRef="If_4">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>

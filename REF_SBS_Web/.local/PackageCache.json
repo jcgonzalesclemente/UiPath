@@ -14,10 +14,10 @@
         "C:\\Users\\carlo\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\6.0.0\\lib/net6.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll",
         "C:\\Users\\carlo\\.nuget\\packages\\microsoft.visualstudio.ole.interop\\16.7.30328.74\\lib/netstandard2.0/Microsoft.VisualStudio.OLE.Interop.dll",
         "C:\\Users\\carlo\\.nuget\\packages\\newtonsoft.json\\13.0.3\\lib/net6.0/Newtonsoft.Json.dll",
-        "C:\\Users\\carlo\\.nuget\\packages\\npoi\\2.5.5\\lib/netstandard2.1/NPOI.dll",
         "C:\\Users\\carlo\\.nuget\\packages\\npoi\\2.5.5\\lib/netstandard2.1/NPOI.OOXML.dll",
         "C:\\Users\\carlo\\.nuget\\packages\\npoi\\2.5.5\\lib/netstandard2.1/NPOI.OpenXml4Net.dll",
         "C:\\Users\\carlo\\.nuget\\packages\\npoi\\2.5.5\\lib/netstandard2.1/NPOI.OpenXmlFormats.dll",
+        "C:\\Users\\carlo\\.nuget\\packages\\npoi\\2.5.5\\lib/netstandard2.1/NPOI.dll",
         "C:\\Users\\carlo\\.nuget\\packages\\portable.bouncycastle\\1.8.9\\lib/netstandard2.0/BouncyCastle.Crypto.dll",
         "C:\\Users\\carlo\\.nuget\\packages\\sharpziplib\\1.3.3\\lib/netstandard2.1/ICSharpCode.SharpZipLib.dll",
         "C:\\Users\\carlo\\.nuget\\packages\\system.io.abstractions\\3.0.10\\lib/netstandard2.0/System.IO.Abstractions.dll",
@@ -27,15 +27,76 @@
         "C:\\Users\\carlo\\.nuget\\packages\\uipath.excel.activities\\2.23.4\\lib/net6.0-windows7.0/Office.dll",
         "C:\\Users\\carlo\\.nuget\\packages\\uipath.excel.activities\\2.23.4\\lib/net6.0-windows7.0/UiPath.Excel.Activities.API.dll",
         "C:\\Users\\carlo\\.nuget\\packages\\uipath.excel.activities\\2.23.4\\lib/net6.0-windows7.0/UiPath.Excel.Activities.Design.dll",
-        "C:\\Users\\carlo\\.nuget\\packages\\uipath.excel.activities\\2.23.4\\lib/net6.0-windows7.0/UiPath.Excel.Activities.dll",
         "C:\\Users\\carlo\\.nuget\\packages\\uipath.excel.activities\\2.23.4\\lib/net6.0-windows7.0/UiPath.Excel.Activities.Package.dll",
         "C:\\Users\\carlo\\.nuget\\packages\\uipath.excel.activities\\2.23.4\\lib/net6.0-windows7.0/UiPath.Excel.Activities.ViewModels.dll",
+        "C:\\Users\\carlo\\.nuget\\packages\\uipath.excel.activities\\2.23.4\\lib/net6.0-windows7.0/UiPath.Excel.Activities.dll",
         "C:\\Users\\carlo\\.nuget\\packages\\uipath.excel.activities\\2.23.4\\lib/net6.0-windows7.0/UiPath.Excel.dll",
         "C:\\Users\\carlo\\.nuget\\packages\\uipath.opentelemetry.contracts\\2.1.3\\lib/netstandard2.0/UiPath.OpenTelemetry.Contracts.dll",
         "C:\\Users\\carlo\\.nuget\\packages\\uipath.platform\\24.10.3\\lib/net6.0-windows7.0/UiPath.Platform.dll",
         "C:\\Users\\carlo\\.nuget\\packages\\uipath.telemetry.client\\2.1.3\\lib/netstandard2.0/TelemetryClient.dll"
       ],
       "Path": "C:\\Users\\carlo\\.nuget\\packages\\uipath.excel.activities\\2.23.4"
+    },
+    {
+      "Package": {
+        "Id": "UiPath.Mail.Activities",
+        "Version": "1.23.11"
+      },
+      "Assemblies": [
+        "C:\\Users\\carlo\\.nuget\\packages\\azure.core\\1.18.0\\lib/net5.0/Azure.Core.dll",
+        "C:\\Users\\carlo\\.nuget\\packages\\bouncycastle.cryptography\\2.4.0\\lib/net6.0/BouncyCastle.Cryptography.dll",
+        "C:\\Users\\carlo\\.nuget\\packages\\google.apis\\1.55.0\\lib/netstandard2.0/Google.Apis.dll",
+        "C:\\Users\\carlo\\.nuget\\packages\\google.apis.auth\\1.55.0\\lib/netstandard2.0/Google.Apis.Auth.PlatformServices.dll",
+        "C:\\Users\\carlo\\.nuget\\packages\\google.apis.auth\\1.55.0\\lib/netstandard2.0/Google.Apis.Auth.dll",
+        "C:\\Users\\carlo\\.nuget\\packages\\google.apis.calendar.v3\\1.55.0.2554\\lib/netstandard2.0/Google.Apis.Calendar.v3.dll",
+        "C:\\Users\\carlo\\.nuget\\packages\\google.apis.core\\1.55.0\\lib/netstandard2.0/Google.Apis.Core.dll",
+        "C:\\Users\\carlo\\.nuget\\packages\\google.apis.gmail.v1\\1.55.0.2510\\lib/netstandard2.0/Google.Apis.Gmail.v1.dll",
+        "C:\\Users\\carlo\\.nuget\\packages\\google.apis.peopleservice.v1\\1.55.0.2567\\lib/netstandard2.0/Google.Apis.PeopleService.v1.dll",
+        "C:\\Users\\carlo\\.nuget\\packages\\htmlagilitypack\\1.11.38\\lib/netstandard2.0/HtmlAgilityPack.dll",
+        "C:\\Users\\carlo\\.nuget\\packages\\mailkit\\4.7.1.1\\lib/net8.0/MailKit.dll",
+        "C:\\Users\\carlo\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\5.0.0\\lib/netstandard2.1/Microsoft.Bcl.AsyncInterfaces.dll",
+        "C:\\Users\\carlo\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\6.0.0\\lib/net6.0/Microsoft.Extensions.DependencyInjection.dll",
+        "C:\\Users\\carlo\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\6.0.0\\lib/net6.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll",
+        "C:\\Users\\carlo\\.nuget\\packages\\microsoft.extensions.filesystemglobbing\\6.0.0\\lib/net6.0/Microsoft.Extensions.FileSystemGlobbing.dll",
+        "C:\\Users\\carlo\\.nuget\\packages\\microsoft.graph\\4.11.0\\lib/netstandard2.0/Microsoft.Graph.dll",
+        "C:\\Users\\carlo\\.nuget\\packages\\microsoft.graph.core\\2.0.5\\lib/netstandard2.0/Microsoft.Graph.Core.dll",
+        "C:\\Users\\carlo\\.nuget\\packages\\microsoft.identity.client\\4.35.1\\lib/netcoreapp2.1/Microsoft.Identity.Client.dll",
+        "C:\\Users\\carlo\\.nuget\\packages\\microsoft.identitymodel.abstractions\\6.34.0\\lib/net6.0/Microsoft.IdentityModel.Abstractions.dll",
+        "C:\\Users\\carlo\\.nuget\\packages\\microsoft.identitymodel.jsonwebtokens\\6.34.0\\lib/net6.0/Microsoft.IdentityModel.JsonWebTokens.dll",
+        "C:\\Users\\carlo\\.nuget\\packages\\microsoft.identitymodel.logging\\6.34.0\\lib/net6.0/Microsoft.IdentityModel.Logging.dll",
+        "C:\\Users\\carlo\\.nuget\\packages\\microsoft.identitymodel.protocols\\6.12.2\\lib/netstandard2.0/Microsoft.IdentityModel.Protocols.dll",
+        "C:\\Users\\carlo\\.nuget\\packages\\microsoft.identitymodel.protocols.openidconnect\\6.12.2\\lib/netstandard2.0/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll",
+        "C:\\Users\\carlo\\.nuget\\packages\\microsoft.identitymodel.tokens\\6.34.0\\lib/net6.0/Microsoft.IdentityModel.Tokens.dll",
+        "C:\\Users\\carlo\\.nuget\\packages\\mimekit\\4.7.1\\lib/net8.0/MimeKit.dll",
+        "C:\\Users\\carlo\\.nuget\\packages\\newtonsoft.json\\13.0.3\\lib/net6.0/Newtonsoft.Json.dll",
+        "C:\\Users\\carlo\\.nuget\\packages\\system.identitymodel.tokens.jwt\\6.34.0\\lib/net6.0/System.IdentityModel.Tokens.Jwt.dll",
+        "C:\\Users\\carlo\\.nuget\\packages\\system.io.abstractions\\3.0.10\\lib/netstandard2.0/System.IO.Abstractions.dll",
+        "C:\\Users\\carlo\\.nuget\\packages\\system.linq.async\\5.0.0\\lib/netcoreapp3.1/System.Linq.Async.dll",
+        "C:\\Users\\carlo\\.nuget\\packages\\system.linq.async.queryable\\5.0.0\\lib/netcoreapp3.1/System.Linq.Async.Queryable.dll",
+        "C:\\Users\\carlo\\.nuget\\packages\\system.memory.data\\1.0.2\\lib/netstandard2.0/System.Memory.Data.dll",
+        "C:\\Users\\carlo\\.nuget\\packages\\system.runtime.caching\\6.0.0\\runtimes/win/lib/net6.0/System.Runtime.Caching.dll",
+        "C:\\Users\\carlo\\.nuget\\packages\\uipath.activities.runtimegovernance\\1.1.6\\lib/net5.0-windows7.0/UiPath.Activities.RuntimeGovernance.dll",
+        "C:\\Users\\carlo\\.nuget\\packages\\uipath.codedworkflows\\24.10.0\\lib/net6.0-windows7.0/UiPath.CodedWorkflows.dll",
+        "C:\\Users\\carlo\\.nuget\\packages\\uipath.connectionclient\\2.0.4\\lib/net5.0/ConnectionClient.dll",
+        "C:\\Users\\carlo\\.nuget\\packages\\uipath.mail.activities\\1.23.11\\lib/net6.0-windows7.0/Interop.Domino.UiPath.dll",
+        "C:\\Users\\carlo\\.nuget\\packages\\uipath.mail.activities\\1.23.11\\lib/net6.0-windows7.0/Microsoft.Exchange.WebServices.dll",
+        "C:\\Users\\carlo\\.nuget\\packages\\uipath.mail.activities\\1.23.11\\lib/net6.0-windows7.0/UiPath.Mail.Activities.Api.dll",
+        "C:\\Users\\carlo\\.nuget\\packages\\uipath.mail.activities\\1.23.11\\lib/net6.0-windows7.0/UiPath.Mail.Activities.Design.dll",
+        "C:\\Users\\carlo\\.nuget\\packages\\uipath.mail.activities\\1.23.11\\lib/net6.0-windows7.0/UiPath.Mail.Activities.dll",
+        "C:\\Users\\carlo\\.nuget\\packages\\uipath.mail.activities\\1.23.11\\lib/net6.0-windows7.0/UiPath.Mail.dll",
+        "C:\\Users\\carlo\\.nuget\\packages\\uipath.mail.activities\\1.23.11\\lib/net6.0-windows7.0/UiPath.MainSessionServer.Shared.dll",
+        "C:\\Users\\carlo\\.nuget\\packages\\uipath.officelibs\\1.0.0\\lib/net6.0-windows7.0/Microsoft.Office.Interop.Excel.dll",
+        "C:\\Users\\carlo\\.nuget\\packages\\uipath.officelibs\\1.0.0\\lib/net6.0-windows7.0/Microsoft.Office.Interop.Outlook.dll",
+        "C:\\Users\\carlo\\.nuget\\packages\\uipath.officelibs\\1.0.0\\lib/net6.0-windows7.0/Microsoft.Office.Interop.PowerPoint.dll",
+        "C:\\Users\\carlo\\.nuget\\packages\\uipath.officelibs\\1.0.0\\lib/net6.0-windows7.0/Microsoft.Office.Interop.Word.dll",
+        "C:\\Users\\carlo\\.nuget\\packages\\uipath.officelibs\\1.0.0\\lib/net6.0-windows7.0/Microsoft.Vbe.Interop.dll",
+        "C:\\Users\\carlo\\.nuget\\packages\\uipath.officelibs\\1.0.0\\lib/net6.0-windows7.0/OFFICE.dll",
+        "C:\\Users\\carlo\\.nuget\\packages\\uipath.officelibs\\1.0.0\\lib/net6.0-windows7.0/UiPath.OfficeLibs.Package.dll",
+        "C:\\Users\\carlo\\.nuget\\packages\\uipath.opentelemetry.contracts\\2.1.3\\lib/netstandard2.0/UiPath.OpenTelemetry.Contracts.dll",
+        "C:\\Users\\carlo\\.nuget\\packages\\uipath.platform\\24.10.3\\lib/net6.0-windows7.0/UiPath.Platform.dll",
+        "C:\\Users\\carlo\\.nuget\\packages\\uipath.telemetry.client\\2.1.3\\lib/netstandard2.0/TelemetryClient.dll"
+      ],
+      "Path": "C:\\Users\\carlo\\.nuget\\packages\\uipath.mail.activities\\1.23.11"
     },
     {
       "Package": {
@@ -107,8 +168,8 @@
         "C:\\Users\\carlo\\.nuget\\packages\\system.servicemodel.duplex\\4.9.0\\lib/net6.0/System.ServiceModel.Duplex.dll",
         "C:\\Users\\carlo\\.nuget\\packages\\system.servicemodel.http\\4.9.0\\lib/net6.0/System.ServiceModel.Http.dll",
         "C:\\Users\\carlo\\.nuget\\packages\\system.servicemodel.nettcp\\4.9.0\\lib/net6.0/System.ServiceModel.NetTcp.dll",
-        "C:\\Users\\carlo\\.nuget\\packages\\system.servicemodel.primitives\\4.9.0\\lib/net6.0/System.ServiceModel.dll",
         "C:\\Users\\carlo\\.nuget\\packages\\system.servicemodel.primitives\\4.9.0\\lib/net6.0/System.ServiceModel.Primitives.dll",
+        "C:\\Users\\carlo\\.nuget\\packages\\system.servicemodel.primitives\\4.9.0\\lib/net6.0/System.ServiceModel.dll",
         "C:\\Users\\carlo\\.nuget\\packages\\system.servicemodel.security\\4.9.0\\lib/net6.0/System.ServiceModel.Security.dll",
         "C:\\Users\\carlo\\.nuget\\packages\\system.servicemodel.syndication\\6.0.0\\lib/net6.0/System.ServiceModel.Syndication.dll",
         "C:\\Users\\carlo\\.nuget\\packages\\system.serviceprocess.servicecontroller\\6.0.1\\runtimes/win/lib/net6.0/System.ServiceProcess.ServiceController.dll",
@@ -148,8 +209,8 @@
         "C:\\Users\\carlo\\.nuget\\packages\\uipath.testing.activities\\24.10.0\\lib/net6.0-windows7.0/UiPath.Testing.Activities.Api.dll",
         "C:\\Users\\carlo\\.nuget\\packages\\uipath.testing.activities\\24.10.0\\lib/net6.0-windows7.0/UiPath.Testing.Activities.Design.dll",
         "C:\\Users\\carlo\\.nuget\\packages\\uipath.testing.activities\\24.10.0\\lib/net6.0-windows7.0/UiPath.Testing.Activities.dll",
-        "C:\\Users\\carlo\\.nuget\\packages\\uipath.testing.activities\\24.10.0\\lib/net6.0-windows7.0/UiPath.Testing.dll",
-        "C:\\Users\\carlo\\.nuget\\packages\\uipath.testing.activities\\24.10.0\\lib/net6.0-windows7.0/UiPath.Testing.RulesLibrary.dll"
+        "C:\\Users\\carlo\\.nuget\\packages\\uipath.testing.activities\\24.10.0\\lib/net6.0-windows7.0/UiPath.Testing.RulesLibrary.dll",
+        "C:\\Users\\carlo\\.nuget\\packages\\uipath.testing.activities\\24.10.0\\lib/net6.0-windows7.0/UiPath.Testing.dll"
       ],
       "Path": "C:\\Users\\carlo\\.nuget\\packages\\uipath.testing.activities\\24.10.0"
     },
@@ -171,10 +232,10 @@
         "C:\\Users\\carlo\\.nuget\\packages\\uipath\\24.10.93.21985\\lib/net6.0-windows7.0/UiPath.Interop.dll",
         "C:\\Users\\carlo\\.nuget\\packages\\uipath.activities.runtimegovernance\\1.1.6\\lib/net5.0-windows7.0/UiPath.Activities.RuntimeGovernance.dll",
         "C:\\Users\\carlo\\.nuget\\packages\\uipath.codedworkflows\\24.10.0\\lib/net6.0-windows7.0/UiPath.CodedWorkflows.dll",
-        "C:\\Users\\carlo\\.nuget\\packages\\uipath.emgucvbundle\\1.1.0\\lib/net5.0/concrt140.dll",
-        "C:\\Users\\carlo\\.nuget\\packages\\uipath.emgucvbundle\\1.1.0\\lib/net5.0/cvextern.dll",
         "C:\\Users\\carlo\\.nuget\\packages\\uipath.emgucvbundle\\1.1.0\\lib/net5.0/Emgu.CV.Bitmap.dll",
         "C:\\Users\\carlo\\.nuget\\packages\\uipath.emgucvbundle\\1.1.0\\lib/net5.0/Emgu.CV.Platform.NetStandard.dll",
+        "C:\\Users\\carlo\\.nuget\\packages\\uipath.emgucvbundle\\1.1.0\\lib/net5.0/concrt140.dll",
+        "C:\\Users\\carlo\\.nuget\\packages\\uipath.emgucvbundle\\1.1.0\\lib/net5.0/cvextern.dll",
         "C:\\Users\\carlo\\.nuget\\packages\\uipath.emgucvbundle\\1.1.0\\lib/net5.0/msvcp140.dll",
         "C:\\Users\\carlo\\.nuget\\packages\\uipath.emgucvbundle\\1.1.0\\lib/net5.0/msvcp140_1.dll",
         "C:\\Users\\carlo\\.nuget\\packages\\uipath.emgucvbundle\\1.1.0\\lib/net5.0/msvcp140_2.dll",
@@ -197,82 +258,21 @@
         "C:\\Users\\carlo\\.nuget\\packages\\uipath.uiautomation.activities\\24.10.0\\lib/net6.0-windows7.0/UiPath.Wizards.dll",
         "C:\\Users\\carlo\\.nuget\\packages\\uipath.uiautomation.activities.runtime\\24.10.0\\lib/net6.0-windows7.0/UiPath.CV.Activities.dll",
         "C:\\Users\\carlo\\.nuget\\packages\\uipath.uiautomation.activities.runtime\\24.10.0\\lib/net6.0-windows7.0/UiPath.CV.dll",
-        "C:\\Users\\carlo\\.nuget\\packages\\uipath.uiautomation.activities.runtime\\24.10.0\\lib/net6.0-windows7.0/UiPath.UiAutomation.Activities.dll",
         "C:\\Users\\carlo\\.nuget\\packages\\uipath.uiautomation.activities.runtime\\24.10.0\\lib/net6.0-windows7.0/UiPath.UIAutomationCore.dll",
+        "C:\\Users\\carlo\\.nuget\\packages\\uipath.uiautomation.activities.runtime\\24.10.0\\lib/net6.0-windows7.0/UiPath.UIAutomationNext.API.dll",
         "C:\\Users\\carlo\\.nuget\\packages\\uipath.uiautomation.activities.runtime\\24.10.0\\lib/net6.0-windows7.0/UiPath.UIAutomationNext.Activities.Contracts.dll",
         "C:\\Users\\carlo\\.nuget\\packages\\uipath.uiautomation.activities.runtime\\24.10.0\\lib/net6.0-windows7.0/UiPath.UIAutomationNext.Activities.dll",
-        "C:\\Users\\carlo\\.nuget\\packages\\uipath.uiautomation.activities.runtime\\24.10.0\\lib/net6.0-windows7.0/UiPath.UIAutomationNext.API.dll",
-        "C:\\Users\\carlo\\.nuget\\packages\\uipath.uiautomation.activities.runtime\\24.10.0\\lib/net6.0-windows7.0/UiPath.UIAutomationNext.dll",
         "C:\\Users\\carlo\\.nuget\\packages\\uipath.uiautomation.activities.runtime\\24.10.0\\lib/net6.0-windows7.0/UiPath.UIAutomationNext.ExternalIntegrations.dll",
+        "C:\\Users\\carlo\\.nuget\\packages\\uipath.uiautomation.activities.runtime\\24.10.0\\lib/net6.0-windows7.0/UiPath.UIAutomationNext.dll",
+        "C:\\Users\\carlo\\.nuget\\packages\\uipath.uiautomation.activities.runtime\\24.10.0\\lib/net6.0-windows7.0/UiPath.UiAutomation.Activities.dll",
         "C:\\Users\\carlo\\.nuget\\packages\\uipath.uiautomation.activities.runtime.design\\24.10.0\\lib/net6.0-windows7.0/UiPath.UIAutomation.Activities.Runtime.Design.dll",
         "C:\\Users\\carlo\\.nuget\\packages\\uipath.vision\\3.13.2\\lib/net6.0-windows7.0/UiPath.Vision.AzureComputerVision.dll",
         "C:\\Users\\carlo\\.nuget\\packages\\uipath.vision\\3.13.2\\lib/net6.0-windows7.0/UiPath.Vision.Core.dll",
-        "C:\\Users\\carlo\\.nuget\\packages\\uipath.vision\\3.13.2\\lib/net6.0-windows7.0/UiPath.Vision.dll",
         "C:\\Users\\carlo\\.nuget\\packages\\uipath.vision\\3.13.2\\lib/net6.0-windows7.0/UiPath.Vision.GoogleCloud.dll",
-        "C:\\Users\\carlo\\.nuget\\packages\\uipath.vision\\3.13.2\\lib/net6.0-windows7.0/UiPath.Vision.Tesseract.dll"
+        "C:\\Users\\carlo\\.nuget\\packages\\uipath.vision\\3.13.2\\lib/net6.0-windows7.0/UiPath.Vision.Tesseract.dll",
+        "C:\\Users\\carlo\\.nuget\\packages\\uipath.vision\\3.13.2\\lib/net6.0-windows7.0/UiPath.Vision.dll"
       ],
       "Path": "C:\\Users\\carlo\\.nuget\\packages\\uipath.uiautomation.activities\\24.10.0"
-    },
-    {
-      "Package": {
-        "Id": "UiPath.Mail.Activities",
-        "Version": "1.23.11"
-      },
-      "Assemblies": [
-        "C:\\Users\\carlo\\.nuget\\packages\\azure.core\\1.18.0\\lib/net5.0/Azure.Core.dll",
-        "C:\\Users\\carlo\\.nuget\\packages\\bouncycastle.cryptography\\2.4.0\\lib/net6.0/BouncyCastle.Cryptography.dll",
-        "C:\\Users\\carlo\\.nuget\\packages\\google.apis\\1.55.0\\lib/netstandard2.0/Google.Apis.dll",
-        "C:\\Users\\carlo\\.nuget\\packages\\google.apis.auth\\1.55.0\\lib/netstandard2.0/Google.Apis.Auth.dll",
-        "C:\\Users\\carlo\\.nuget\\packages\\google.apis.auth\\1.55.0\\lib/netstandard2.0/Google.Apis.Auth.PlatformServices.dll",
-        "C:\\Users\\carlo\\.nuget\\packages\\google.apis.calendar.v3\\1.55.0.2554\\lib/netstandard2.0/Google.Apis.Calendar.v3.dll",
-        "C:\\Users\\carlo\\.nuget\\packages\\google.apis.core\\1.55.0\\lib/netstandard2.0/Google.Apis.Core.dll",
-        "C:\\Users\\carlo\\.nuget\\packages\\google.apis.gmail.v1\\1.55.0.2510\\lib/netstandard2.0/Google.Apis.Gmail.v1.dll",
-        "C:\\Users\\carlo\\.nuget\\packages\\google.apis.peopleservice.v1\\1.55.0.2567\\lib/netstandard2.0/Google.Apis.PeopleService.v1.dll",
-        "C:\\Users\\carlo\\.nuget\\packages\\htmlagilitypack\\1.11.38\\lib/netstandard2.0/HtmlAgilityPack.dll",
-        "C:\\Users\\carlo\\.nuget\\packages\\mailkit\\4.7.1.1\\lib/net8.0/MailKit.dll",
-        "C:\\Users\\carlo\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\5.0.0\\lib/netstandard2.1/Microsoft.Bcl.AsyncInterfaces.dll",
-        "C:\\Users\\carlo\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\6.0.0\\lib/net6.0/Microsoft.Extensions.DependencyInjection.dll",
-        "C:\\Users\\carlo\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\6.0.0\\lib/net6.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll",
-        "C:\\Users\\carlo\\.nuget\\packages\\microsoft.extensions.filesystemglobbing\\6.0.0\\lib/net6.0/Microsoft.Extensions.FileSystemGlobbing.dll",
-        "C:\\Users\\carlo\\.nuget\\packages\\microsoft.graph\\4.11.0\\lib/netstandard2.0/Microsoft.Graph.dll",
-        "C:\\Users\\carlo\\.nuget\\packages\\microsoft.graph.core\\2.0.5\\lib/netstandard2.0/Microsoft.Graph.Core.dll",
-        "C:\\Users\\carlo\\.nuget\\packages\\microsoft.identity.client\\4.35.1\\lib/netcoreapp2.1/Microsoft.Identity.Client.dll",
-        "C:\\Users\\carlo\\.nuget\\packages\\microsoft.identitymodel.abstractions\\6.34.0\\lib/net6.0/Microsoft.IdentityModel.Abstractions.dll",
-        "C:\\Users\\carlo\\.nuget\\packages\\microsoft.identitymodel.jsonwebtokens\\6.34.0\\lib/net6.0/Microsoft.IdentityModel.JsonWebTokens.dll",
-        "C:\\Users\\carlo\\.nuget\\packages\\microsoft.identitymodel.logging\\6.34.0\\lib/net6.0/Microsoft.IdentityModel.Logging.dll",
-        "C:\\Users\\carlo\\.nuget\\packages\\microsoft.identitymodel.protocols\\6.12.2\\lib/netstandard2.0/Microsoft.IdentityModel.Protocols.dll",
-        "C:\\Users\\carlo\\.nuget\\packages\\microsoft.identitymodel.protocols.openidconnect\\6.12.2\\lib/netstandard2.0/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll",
-        "C:\\Users\\carlo\\.nuget\\packages\\microsoft.identitymodel.tokens\\6.34.0\\lib/net6.0/Microsoft.IdentityModel.Tokens.dll",
-        "C:\\Users\\carlo\\.nuget\\packages\\mimekit\\4.7.1\\lib/net8.0/MimeKit.dll",
-        "C:\\Users\\carlo\\.nuget\\packages\\newtonsoft.json\\13.0.3\\lib/net6.0/Newtonsoft.Json.dll",
-        "C:\\Users\\carlo\\.nuget\\packages\\system.identitymodel.tokens.jwt\\6.34.0\\lib/net6.0/System.IdentityModel.Tokens.Jwt.dll",
-        "C:\\Users\\carlo\\.nuget\\packages\\system.io.abstractions\\3.0.10\\lib/netstandard2.0/System.IO.Abstractions.dll",
-        "C:\\Users\\carlo\\.nuget\\packages\\system.linq.async\\5.0.0\\lib/netcoreapp3.1/System.Linq.Async.dll",
-        "C:\\Users\\carlo\\.nuget\\packages\\system.linq.async.queryable\\5.0.0\\lib/netcoreapp3.1/System.Linq.Async.Queryable.dll",
-        "C:\\Users\\carlo\\.nuget\\packages\\system.memory.data\\1.0.2\\lib/netstandard2.0/System.Memory.Data.dll",
-        "C:\\Users\\carlo\\.nuget\\packages\\system.runtime.caching\\6.0.0\\runtimes/win/lib/net6.0/System.Runtime.Caching.dll",
-        "C:\\Users\\carlo\\.nuget\\packages\\uipath.activities.runtimegovernance\\1.1.6\\lib/net5.0-windows7.0/UiPath.Activities.RuntimeGovernance.dll",
-        "C:\\Users\\carlo\\.nuget\\packages\\uipath.codedworkflows\\24.10.0\\lib/net6.0-windows7.0/UiPath.CodedWorkflows.dll",
-        "C:\\Users\\carlo\\.nuget\\packages\\uipath.connectionclient\\2.0.4\\lib/net5.0/ConnectionClient.dll",
-        "C:\\Users\\carlo\\.nuget\\packages\\uipath.mail.activities\\1.23.11\\lib/net6.0-windows7.0/Interop.Domino.UiPath.dll",
-        "C:\\Users\\carlo\\.nuget\\packages\\uipath.mail.activities\\1.23.11\\lib/net6.0-windows7.0/Microsoft.Exchange.WebServices.dll",
-        "C:\\Users\\carlo\\.nuget\\packages\\uipath.mail.activities\\1.23.11\\lib/net6.0-windows7.0/UiPath.Mail.Activities.Api.dll",
-        "C:\\Users\\carlo\\.nuget\\packages\\uipath.mail.activities\\1.23.11\\lib/net6.0-windows7.0/UiPath.Mail.Activities.Design.dll",
-        "C:\\Users\\carlo\\.nuget\\packages\\uipath.mail.activities\\1.23.11\\lib/net6.0-windows7.0/UiPath.Mail.Activities.dll",
-        "C:\\Users\\carlo\\.nuget\\packages\\uipath.mail.activities\\1.23.11\\lib/net6.0-windows7.0/UiPath.Mail.dll",
-        "C:\\Users\\carlo\\.nuget\\packages\\uipath.mail.activities\\1.23.11\\lib/net6.0-windows7.0/UiPath.MainSessionServer.Shared.dll",
-        "C:\\Users\\carlo\\.nuget\\packages\\uipath.officelibs\\1.0.0\\lib/net6.0-windows7.0/Microsoft.Office.Interop.Excel.dll",
-        "C:\\Users\\carlo\\.nuget\\packages\\uipath.officelibs\\1.0.0\\lib/net6.0-windows7.0/Microsoft.Office.Interop.Outlook.dll",
-        "C:\\Users\\carlo\\.nuget\\packages\\uipath.officelibs\\1.0.0\\lib/net6.0-windows7.0/Microsoft.Office.Interop.PowerPoint.dll",
-        "C:\\Users\\carlo\\.nuget\\packages\\uipath.officelibs\\1.0.0\\lib/net6.0-windows7.0/Microsoft.Office.Interop.Word.dll",
-        "C:\\Users\\carlo\\.nuget\\packages\\uipath.officelibs\\1.0.0\\lib/net6.0-windows7.0/Microsoft.Vbe.Interop.dll",
-        "C:\\Users\\carlo\\.nuget\\packages\\uipath.officelibs\\1.0.0\\lib/net6.0-windows7.0/OFFICE.dll",
-        "C:\\Users\\carlo\\.nuget\\packages\\uipath.officelibs\\1.0.0\\lib/net6.0-windows7.0/UiPath.OfficeLibs.Package.dll",
-        "C:\\Users\\carlo\\.nuget\\packages\\uipath.opentelemetry.contracts\\2.1.3\\lib/netstandard2.0/UiPath.OpenTelemetry.Contracts.dll",
-        "C:\\Users\\carlo\\.nuget\\packages\\uipath.platform\\24.10.3\\lib/net6.0-windows7.0/UiPath.Platform.dll",
-        "C:\\Users\\carlo\\.nuget\\packages\\uipath.telemetry.client\\2.1.3\\lib/netstandard2.0/TelemetryClient.dll"
-      ],
-      "Path": "C:\\Users\\carlo\\.nuget\\packages\\uipath.mail.activities\\1.23.11"
     }
   ],
   "Conflicts": [],
@@ -4949,8 +4949,8 @@
         "Version": "1.55.0"
       },
       "Assemblies": [
-        "C:\\Users\\carlo\\.nuget\\packages\\google.apis.auth\\1.55.0\\lib\\netstandard2.0\\Google.Apis.Auth.dll",
-        "C:\\Users\\carlo\\.nuget\\packages\\google.apis.auth\\1.55.0\\lib\\netstandard2.0\\Google.Apis.Auth.PlatformServices.dll"
+        "C:\\Users\\carlo\\.nuget\\packages\\google.apis.auth\\1.55.0\\lib\\netstandard2.0\\Google.Apis.Auth.PlatformServices.dll",
+        "C:\\Users\\carlo\\.nuget\\packages\\google.apis.auth\\1.55.0\\lib\\netstandard2.0\\Google.Apis.Auth.dll"
       ],
       "Path": "C:\\Users\\carlo\\.nuget\\packages\\google.apis.auth\\1.55.0"
     },
@@ -5715,10 +5715,10 @@
         "Version": "2.5.5"
       },
       "Assemblies": [
-        "C:\\Users\\carlo\\.nuget\\packages\\npoi\\2.5.5\\lib\\netstandard2.1\\NPOI.dll",
         "C:\\Users\\carlo\\.nuget\\packages\\npoi\\2.5.5\\lib\\netstandard2.1\\NPOI.OOXML.dll",
         "C:\\Users\\carlo\\.nuget\\packages\\npoi\\2.5.5\\lib\\netstandard2.1\\NPOI.OpenXml4Net.dll",
-        "C:\\Users\\carlo\\.nuget\\packages\\npoi\\2.5.5\\lib\\netstandard2.1\\NPOI.OpenXmlFormats.dll"
+        "C:\\Users\\carlo\\.nuget\\packages\\npoi\\2.5.5\\lib\\netstandard2.1\\NPOI.OpenXmlFormats.dll",
+        "C:\\Users\\carlo\\.nuget\\packages\\npoi\\2.5.5\\lib\\netstandard2.1\\NPOI.dll"
       ],
       "Path": "C:\\Users\\carlo\\.nuget\\packages\\npoi\\2.5.5"
     },
@@ -6390,8 +6390,8 @@
         "Version": "6.0.0"
       },
       "Assemblies": [
-        "C:\\Users\\carlo\\.nuget\\packages\\system.diagnostics.eventlog\\6.0.0\\runtimes\\win\\lib\\net6.0\\System.Diagnostics.EventLog.dll",
-        "C:\\Users\\carlo\\.nuget\\packages\\system.diagnostics.eventlog\\6.0.0\\runtimes\\win\\lib\\net6.0\\System.Diagnostics.EventLog.Messages.dll"
+        "C:\\Users\\carlo\\.nuget\\packages\\system.diagnostics.eventlog\\6.0.0\\runtimes\\win\\lib\\net6.0\\System.Diagnostics.EventLog.Messages.dll",
+        "C:\\Users\\carlo\\.nuget\\packages\\system.diagnostics.eventlog\\6.0.0\\runtimes\\win\\lib\\net6.0\\System.Diagnostics.EventLog.dll"
       ],
       "Path": "C:\\Users\\carlo\\.nuget\\packages\\system.diagnostics.eventlog\\6.0.0"
     },
@@ -7127,8 +7127,8 @@
         "Version": "4.9.0"
       },
       "Assemblies": [
-        "C:\\Users\\carlo\\.nuget\\packages\\system.servicemodel.primitives\\4.9.0\\lib\\net6.0\\System.ServiceModel.dll",
-        "C:\\Users\\carlo\\.nuget\\packages\\system.servicemodel.primitives\\4.9.0\\lib\\net6.0\\System.ServiceModel.Primitives.dll"
+        "C:\\Users\\carlo\\.nuget\\packages\\system.servicemodel.primitives\\4.9.0\\lib\\net6.0\\System.ServiceModel.Primitives.dll",
+        "C:\\Users\\carlo\\.nuget\\packages\\system.servicemodel.primitives\\4.9.0\\lib\\net6.0\\System.ServiceModel.dll"
       ],
       "Path": "C:\\Users\\carlo\\.nuget\\packages\\system.servicemodel.primitives\\4.9.0"
     },
@@ -7400,10 +7400,10 @@
         "Version": "1.1.0"
       },
       "Assemblies": [
-        "C:\\Users\\carlo\\.nuget\\packages\\uipath.emgucvbundle\\1.1.0\\lib\\net5.0\\concrt140.dll",
-        "C:\\Users\\carlo\\.nuget\\packages\\uipath.emgucvbundle\\1.1.0\\lib\\net5.0\\cvextern.dll",
         "C:\\Users\\carlo\\.nuget\\packages\\uipath.emgucvbundle\\1.1.0\\lib\\net5.0\\Emgu.CV.Bitmap.dll",
         "C:\\Users\\carlo\\.nuget\\packages\\uipath.emgucvbundle\\1.1.0\\lib\\net5.0\\Emgu.CV.Platform.NetStandard.dll",
+        "C:\\Users\\carlo\\.nuget\\packages\\uipath.emgucvbundle\\1.1.0\\lib\\net5.0\\concrt140.dll",
+        "C:\\Users\\carlo\\.nuget\\packages\\uipath.emgucvbundle\\1.1.0\\lib\\net5.0\\cvextern.dll",
         "C:\\Users\\carlo\\.nuget\\packages\\uipath.emgucvbundle\\1.1.0\\lib\\net5.0\\msvcp140.dll",
         "C:\\Users\\carlo\\.nuget\\packages\\uipath.emgucvbundle\\1.1.0\\lib\\net5.0\\msvcp140_1.dll",
         "C:\\Users\\carlo\\.nuget\\packages\\uipath.emgucvbundle\\1.1.0\\lib\\net5.0\\msvcp140_2.dll",
@@ -7425,9 +7425,9 @@
         "C:\\Users\\carlo\\.nuget\\packages\\uipath.excel.activities\\2.23.4\\lib\\net6.0-windows7.0\\Office.dll",
         "C:\\Users\\carlo\\.nuget\\packages\\uipath.excel.activities\\2.23.4\\lib\\net6.0-windows7.0\\UiPath.Excel.Activities.API.dll",
         "C:\\Users\\carlo\\.nuget\\packages\\uipath.excel.activities\\2.23.4\\lib\\net6.0-windows7.0\\UiPath.Excel.Activities.Design.dll",
-        "C:\\Users\\carlo\\.nuget\\packages\\uipath.excel.activities\\2.23.4\\lib\\net6.0-windows7.0\\UiPath.Excel.Activities.dll",
         "C:\\Users\\carlo\\.nuget\\packages\\uipath.excel.activities\\2.23.4\\lib\\net6.0-windows7.0\\UiPath.Excel.Activities.Package.dll",
         "C:\\Users\\carlo\\.nuget\\packages\\uipath.excel.activities\\2.23.4\\lib\\net6.0-windows7.0\\UiPath.Excel.Activities.ViewModels.dll",
+        "C:\\Users\\carlo\\.nuget\\packages\\uipath.excel.activities\\2.23.4\\lib\\net6.0-windows7.0\\UiPath.Excel.Activities.dll",
         "C:\\Users\\carlo\\.nuget\\packages\\uipath.excel.activities\\2.23.4\\lib\\net6.0-windows7.0\\UiPath.Excel.dll"
       ],
       "Path": "C:\\Users\\carlo\\.nuget\\packages\\uipath.excel.activities\\2.23.4"
@@ -7568,8 +7568,8 @@
         "C:\\Users\\carlo\\.nuget\\packages\\uipath.testing.activities\\24.10.0\\lib\\net6.0-windows7.0\\UiPath.Testing.Activities.Api.dll",
         "C:\\Users\\carlo\\.nuget\\packages\\uipath.testing.activities\\24.10.0\\lib\\net6.0-windows7.0\\UiPath.Testing.Activities.Design.dll",
         "C:\\Users\\carlo\\.nuget\\packages\\uipath.testing.activities\\24.10.0\\lib\\net6.0-windows7.0\\UiPath.Testing.Activities.dll",
-        "C:\\Users\\carlo\\.nuget\\packages\\uipath.testing.activities\\24.10.0\\lib\\net6.0-windows7.0\\UiPath.Testing.dll",
-        "C:\\Users\\carlo\\.nuget\\packages\\uipath.testing.activities\\24.10.0\\lib\\net6.0-windows7.0\\UiPath.Testing.RulesLibrary.dll"
+        "C:\\Users\\carlo\\.nuget\\packages\\uipath.testing.activities\\24.10.0\\lib\\net6.0-windows7.0\\UiPath.Testing.RulesLibrary.dll",
+        "C:\\Users\\carlo\\.nuget\\packages\\uipath.testing.activities\\24.10.0\\lib\\net6.0-windows7.0\\UiPath.Testing.dll"
       ],
       "Path": "C:\\Users\\carlo\\.nuget\\packages\\uipath.testing.activities\\24.10.0"
     },
@@ -7595,13 +7595,13 @@
       "Assemblies": [
         "C:\\Users\\carlo\\.nuget\\packages\\uipath.uiautomation.activities.runtime\\24.10.0\\lib\\net6.0-windows7.0\\UiPath.CV.Activities.dll",
         "C:\\Users\\carlo\\.nuget\\packages\\uipath.uiautomation.activities.runtime\\24.10.0\\lib\\net6.0-windows7.0\\UiPath.CV.dll",
-        "C:\\Users\\carlo\\.nuget\\packages\\uipath.uiautomation.activities.runtime\\24.10.0\\lib\\net6.0-windows7.0\\UiPath.UiAutomation.Activities.dll",
         "C:\\Users\\carlo\\.nuget\\packages\\uipath.uiautomation.activities.runtime\\24.10.0\\lib\\net6.0-windows7.0\\UiPath.UIAutomationCore.dll",
+        "C:\\Users\\carlo\\.nuget\\packages\\uipath.uiautomation.activities.runtime\\24.10.0\\lib\\net6.0-windows7.0\\UiPath.UIAutomationNext.API.dll",
         "C:\\Users\\carlo\\.nuget\\packages\\uipath.uiautomation.activities.runtime\\24.10.0\\lib\\net6.0-windows7.0\\UiPath.UIAutomationNext.Activities.Contracts.dll",
         "C:\\Users\\carlo\\.nuget\\packages\\uipath.uiautomation.activities.runtime\\24.10.0\\lib\\net6.0-windows7.0\\UiPath.UIAutomationNext.Activities.dll",
-        "C:\\Users\\carlo\\.nuget\\packages\\uipath.uiautomation.activities.runtime\\24.10.0\\lib\\net6.0-windows7.0\\UiPath.UIAutomationNext.API.dll",
+        "C:\\Users\\carlo\\.nuget\\packages\\uipath.uiautomation.activities.runtime\\24.10.0\\lib\\net6.0-windows7.0\\UiPath.UIAutomationNext.ExternalIntegrations.dll",
         "C:\\Users\\carlo\\.nuget\\packages\\uipath.uiautomation.activities.runtime\\24.10.0\\lib\\net6.0-windows7.0\\UiPath.UIAutomationNext.dll",
-        "C:\\Users\\carlo\\.nuget\\packages\\uipath.uiautomation.activities.runtime\\24.10.0\\lib\\net6.0-windows7.0\\UiPath.UIAutomationNext.ExternalIntegrations.dll"
+        "C:\\Users\\carlo\\.nuget\\packages\\uipath.uiautomation.activities.runtime\\24.10.0\\lib\\net6.0-windows7.0\\UiPath.UiAutomation.Activities.dll"
       ],
       "Path": "C:\\Users\\carlo\\.nuget\\packages\\uipath.uiautomation.activities.runtime\\24.10.0"
     },
@@ -7623,9 +7623,9 @@
       "Assemblies": [
         "C:\\Users\\carlo\\.nuget\\packages\\uipath.vision\\3.13.2\\lib\\net6.0-windows7.0\\UiPath.Vision.AzureComputerVision.dll",
         "C:\\Users\\carlo\\.nuget\\packages\\uipath.vision\\3.13.2\\lib\\net6.0-windows7.0\\UiPath.Vision.Core.dll",
-        "C:\\Users\\carlo\\.nuget\\packages\\uipath.vision\\3.13.2\\lib\\net6.0-windows7.0\\UiPath.Vision.dll",
         "C:\\Users\\carlo\\.nuget\\packages\\uipath.vision\\3.13.2\\lib\\net6.0-windows7.0\\UiPath.Vision.GoogleCloud.dll",
-        "C:\\Users\\carlo\\.nuget\\packages\\uipath.vision\\3.13.2\\lib\\net6.0-windows7.0\\UiPath.Vision.Tesseract.dll"
+        "C:\\Users\\carlo\\.nuget\\packages\\uipath.vision\\3.13.2\\lib\\net6.0-windows7.0\\UiPath.Vision.Tesseract.dll",
+        "C:\\Users\\carlo\\.nuget\\packages\\uipath.vision\\3.13.2\\lib\\net6.0-windows7.0\\UiPath.Vision.dll"
       ],
       "Path": "C:\\Users\\carlo\\.nuget\\packages\\uipath.vision\\3.13.2"
     }

@@ -1,0 +1,71 @@
+SET RutaTemp TO outConfigEspecificos['RutaTemp']
+SET QueryCuentas TO $'''%''%'''
+SET Numero1 TO $'''\'%Numero%\''''
+SET Tipo1 TO $'''\'%Tipo%\''''
+IF (File.IfFile.DoesNotExist File: $'''%RutaTemp%\\Cuenta%Asiento%_%Numero%_%Tipo%_%Now%.xlsx''') THEN
+    @@'InputSchema:query/actualParameters': '565839935'
+@@'OutputSchema:ExecutePassThroughNativeQueryResponse': '1699678939'
+@@connectionDisplayName: 'Cre67a6_shared_oracle_b1d8e1fd'
+External.InvokeCloudConnector Connection: 'a6cda74e-fe31-4015-9af1-d937e1b4f60e' ConnectorId: '/providers/Microsoft.PowerApps/apis/shared_oracle' OperationId: 'ExecutePassThroughNativeQuery' timeout: 500 @'query/query': $'''SELECT acc.fecha AS \"Fecha Aplicación\", dcc.fecha AS \"Fecha\", dcc.tipo AS \"Tipo\", dcc.documento AS \"Número\", dcc.cliente AS \"Cliente\", dcc.aplicacion AS \"Concepto\", dcc.moneda AS \"Moneda\", dcc.monto AS \"Monto\", acc.monto_debito AS \"Monto Aplicado\", acc.monto_credito AS \"Monto Cancelado (US$)\", sdc.descripcion AS \"Subtipo\", acc.asiento AS \"Asiento\", dcc.num_parcialidades AS \"Número de Parcialidades\", dcc.cliente_origen AS \"Cliente Origen\" FROM CONDOR.documentos_cc dcc JOIN CONDOR.auxiliar_cc acc ON dcc.tipo = acc.tipo_debito AND dcc.documento = acc.debito JOIN CONDOR.subtipo_doc_cc sdc ON dcc.tipo = sdc.tipo AND dcc.subtipo = sdc.subtipo WHERE acc.tipo_credito = %Tipo1% AND acc.credito = %Numero1% ORDER BY 6 ASC''' @ExecutePassThroughNativeQueryResponse=> QueryResponse
+    SET Estado TO $'''Encontrado'''
+    SET QueryCuentas TO QueryResponse['ResultSets']['Table1']
+    CALL Fecha
+    IF QueryCuentas <> $'''%''%''' THEN
+        LABEL WritePlantilla
+        IF (File.IfFile.Exists File: $'''%outConfigEspecificos['RutaPlantilla']%\\Plantilla.xlsx''') THEN
+            SET FilaPlantilla TO 2
+            Excel.LaunchExcel.LaunchAndOpenUnderExistingProcess Path: $'''%outConfigEspecificos['RutaPlantilla']%\\Plantilla.xlsx''' Visible: False ReadOnly: False UseMachineLocale: False Instance=> ExcelPlantilla
+            LOOP FOREACH Item IN QueryCuentas
+                Excel.SetActiveWorksheet.ActivateWorksheetByName Instance: ExcelPlantilla Name: $'''Aplicaciones del Documento'''
+                Excel.WriteToExcel.WriteCell Instance: ExcelPlantilla Value: Item['Fecha_x0020_Aplicación'] Column: $'''A''' Row: FilaPlantilla
+                Excel.WriteToExcel.WriteCell Instance: ExcelPlantilla Value: Item['Fecha'] Column: $'''B''' Row: FilaPlantilla
+                Excel.WriteToExcel.WriteCell Instance: ExcelPlantilla Value: Item['Tipo'] Column: $'''C''' Row: FilaPlantilla
+                Excel.WriteToExcel.WriteCell Instance: ExcelPlantilla Value: Item['Número'] Column: $'''D''' Row: FilaPlantilla
+                Excel.WriteToExcel.WriteCell Instance: ExcelPlantilla Value: Item['Cliente'] Column: $'''E''' Row: FilaPlantilla
+                Excel.WriteToExcel.WriteCell Instance: ExcelPlantilla Value: Item['Concepto'] Column: $'''F''' Row: FilaPlantilla
+                Excel.WriteToExcel.WriteCell Instance: ExcelPlantilla Value: Item['Moneda'] Column: $'''G''' Row: FilaPlantilla
+                Excel.WriteToExcel.WriteCell Instance: ExcelPlantilla Value: Item['Monto'] Column: $'''H''' Row: FilaPlantilla
+                Excel.WriteToExcel.WriteCell Instance: ExcelPlantilla Value: Item['Monto_x0020_Aplicado'] Column: $'''I''' Row: FilaPlantilla
+                Excel.WriteToExcel.WriteCell Instance: ExcelPlantilla Value: Item['Monto_x0020_Cancelado_x0020_(US$)'] Column: $'''J''' Row: FilaPlantilla
+                Excel.WriteToExcel.WriteCell Instance: ExcelPlantilla Value: Item['Subtipo'] Column: $'''K''' Row: FilaPlantilla
+                Excel.WriteToExcel.WriteCell Instance: ExcelPlantilla Value: Item['Asiento'] Column: $'''L''' Row: FilaPlantilla
+                Excel.WriteToExcel.WriteCell Instance: ExcelPlantilla Value: Item['Número_x0020_de_x0020_Parcialidades'] Column: $'''M''' Row: FilaPlantilla
+                Excel.WriteToExcel.WriteCell Instance: ExcelPlantilla Value: Item['Cliente_x0020_Origen'] Column: $'''N''' Row: FilaPlantilla
+                Variables.IncreaseVariable Value: FilaPlantilla IncrementValue: 1
+            END
+            Text.Replace.ReplaceText Text: Asiento TextToFind: $'''.''' IgnoreCase: False ReplaceWith: $'''%''%''' ActivateEscapeSequences: False ComparisonType: Text.TextComparisonType.CultureSensitive Result=> Asiento
+            Text.Replace.ReplaceText Text: Numero TextToFind: $'''.''' IgnoreCase: False ReplaceWith: $'''%''%''' ActivateEscapeSequences: False ComparisonType: Text.TextComparisonType.CultureSensitive Result=> Numero
+            Excel.SaveExcel.SaveAs Instance: ExcelPlantilla DocumentFormat: Excel.ExcelFormat.OpenXmlWorkbook DocumentPath: $'''%outConfigEspecificos['RutaTemp']%\\Cuenta%Asiento%_%Numero%_%Tipo%_%Now%'''
+            Excel.CloseExcel.CloseAndSave Instance: ExcelPlantilla
+            System.TerminateProcess.TerminateProcessByName ProcessName: $'''EXCEL'''
+                ON ERROR
+
+                END
+        ELSE
+            GOTO WritePlantilla
+        END
+    END
+END
+
+# [ControlRepository][PowerAutomateDesktop]
+
+{
+  "ControlRepositorySymbols": [],
+  "ImageRepositorySymbol": {
+    "Repository": "{\r\n  \"Folders\": [],\r\n  \"Images\": [],\r\n  \"Version\": 1\r\n}",
+    "ImportMetadata": {},
+    "Name": "imgrepo"
+  },
+  "ConnectionReferences": [
+    {
+      "ConnectorId": "/providers/Microsoft.PowerApps/apis/shared_oracle",
+      "DisplayName": "Cre67a6_shared_oracle_b1d8e1fd",
+      "InternalId": "a6cda74e-fe31-4015-9af1-d937e1b4f60e",
+      "IsDisabled": false,
+      "LogicalName": "Cre67a6_shared_oracle_b1d8e1fd1a30489582deac6a6f7f56ab",
+      "IsEmbedded": false,
+      "ConnectionName": "7647f9eff2864aaca62981d028d903e8",
+      "ConnectionDisplayName": "10.10.10.5:1521/oractrvl"
+    }
+  ]
+}

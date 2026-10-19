@@ -1,4 +1,5 @@
 SET RutaTemp TO outConfigEspecificos['RutaTemp']
+SET RutaPlantilla TO outConfigEspecificos['RutaPlantilla']
 SET QueryCuentas TO $'''%''%'''
 SET Numero1 TO $'''\'%Numero%\''''
 SET Tipo1 TO $'''\'%Tipo%\''''
@@ -12,9 +13,9 @@ External.InvokeCloudConnector Connection: 'a6cda74e-fe31-4015-9af1-d937e1b4f60e'
     CALL Fecha
     IF QueryCuentas <> $'''%''%''' THEN
         LABEL WritePlantilla
-        IF (File.IfFile.Exists File: $'''%outConfigEspecificos['RutaPlantilla']%\\Plantilla.xlsx''') THEN
+        IF (File.IfFile.Exists File: $'''%RutaPlantilla%\\Plantilla.xlsx''') THEN
             SET FilaPlantilla TO 2
-            Excel.LaunchExcel.LaunchAndOpenUnderExistingProcess Path: $'''%outConfigEspecificos['RutaPlantilla']%\\Plantilla.xlsx''' Visible: False ReadOnly: False UseMachineLocale: False Instance=> ExcelPlantilla
+            Excel.LaunchExcel.LaunchAndOpenUnderExistingProcess Path: $'''%RutaPlantilla%\\Plantilla.xlsx''' Visible: False ReadOnly: False UseMachineLocale: False Instance=> ExcelPlantilla
             LOOP FOREACH Item IN QueryCuentas
                 Excel.SetActiveWorksheet.ActivateWorksheetByName Instance: ExcelPlantilla Name: $'''Aplicaciones del Documento'''
                 Excel.WriteToExcel.WriteCell Instance: ExcelPlantilla Value: Item['Fecha_x0020_Aplicación'] Column: $'''A''' Row: FilaPlantilla
@@ -35,7 +36,7 @@ External.InvokeCloudConnector Connection: 'a6cda74e-fe31-4015-9af1-d937e1b4f60e'
             END
             Text.Replace.ReplaceText Text: Asiento TextToFind: $'''.''' IgnoreCase: False ReplaceWith: $'''%''%''' ActivateEscapeSequences: False ComparisonType: Text.TextComparisonType.CultureSensitive Result=> Asiento
             Text.Replace.ReplaceText Text: Numero TextToFind: $'''.''' IgnoreCase: False ReplaceWith: $'''%''%''' ActivateEscapeSequences: False ComparisonType: Text.TextComparisonType.CultureSensitive Result=> Numero
-            Excel.SaveExcel.SaveAs Instance: ExcelPlantilla DocumentFormat: Excel.ExcelFormat.OpenXmlWorkbook DocumentPath: $'''%outConfigEspecificos['RutaTemp']%\\Cuenta%Asiento%_%Numero%_%Tipo%_%Now%'''
+            Excel.SaveExcel.SaveAs Instance: ExcelPlantilla DocumentFormat: Excel.ExcelFormat.OpenXmlWorkbook DocumentPath: $'''%RutaTemp%\\Cuenta%Asiento%_%Numero%_%Tipo%_%Now%'''
             Excel.CloseExcel.CloseAndSave Instance: ExcelPlantilla
             System.TerminateProcess.TerminateProcessByName ProcessName: $'''EXCEL'''
                 ON ERROR
